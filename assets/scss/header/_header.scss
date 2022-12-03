@@ -1,0 +1,58 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.header {
+  padding-top: 54px;
+  &__actions {
+  }
+}
+.layout {
+  &__main {
+  }
+}
+.actions {
+  display: flex;
+  background: #ffffff;
+  border-radius: 70px;
+  justify-content: space-between;
+  padding: 24px 75px;
+  align-items: center;
+
+  &__logo {
+    max-height: 30px;
+  }
+
+  &__navbar {
+  }
+
+  &__social {
+  }
+}
+.navbar {
+  &__list {
+    @include unlist;
+    display: flex;
+    gap: 50px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: block;
+    font-weight: $font-weight-700;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: $color-main;
+  }
+}
+.social {
+  display: flex;
+  gap: 25px;
+  &__link {
+  }
+
+  &__img {
+  }
+}
