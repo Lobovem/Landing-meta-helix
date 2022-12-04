@@ -12,8 +12,8 @@
 <body class="body layout">
 
   <header class="header">
-    <img class="header__decor-left" src="assets/img/decor-left.png" alt="decor-left.png">
-    <!-- <img class="header__decor-right" src="assets/img/decor-right.png" alt="decor-right.png"> -->
+    <!-- <img class="header__decor-left" src="assets/img/decor-left.png" alt="decor-left.png">
+    <img class="header__decor-right" src="assets/img/decor-right.png" alt="decor-right.png"> -->
     <div class="layout__main">
 
       <div class="header__actions actions">
@@ -22,10 +22,17 @@
         </div>
 
         <nav class="actions__navbar navbar">
+
+          <div class="navbar__burger">
+            <span class="navbar__burger-row"></span>
+            <span class="navbar__burger-row"></span>
+            <span class="navbar__burger-row"></span>
+          </div>
+
           <ul class="navbar__list">
-            <li class="navbar__item"><a class="navbar__link" href="">About</a> </li>
-            <li class="navbar__item"><a class="navbar__link" href="">Holders Benefits</a> </li>
-            <li class="navbar__item"><a class="navbar__link" href="">Tokenomics</a> </li>
+            <li class="navbar__item active"><a class="navbar__link " href="">About</a> </li>
+            <li class="navbar__item "><a class="navbar__link" href="">Holders Benefits</a> </li>
+            <li class="navbar__item "><a class="navbar__link" href="">Tokenomics</a> </li>
             <li class="navbar__item"><a class="navbar__link" href="">HelixMap</a> </li>
           </ul>
         </nav>
@@ -46,7 +53,7 @@
       <img class="header__decor-sm decor-sm" src="assets/img/decor-icon-sm.svg" alt="decor-icon-sm.svg">
       <button class="header__button button">Mint</button>
 
-      <div class="header__info rating">
+      <!-- <div class="header__info rating">
         <div class="rating__header">
           <div class="rating__decor-box">
             <img class="rating__decor" src="assets/img/decor-icon-sm.svg" alt="decor-icon-sm.svg">
@@ -94,7 +101,7 @@
 
         </div>
 
-      </div>
+      </div> -->
     </div>
   </header>
 
@@ -107,7 +114,9 @@
 
 
 
-  <script src="./assets/js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

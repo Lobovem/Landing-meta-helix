@@ -13,6 +13,7 @@ html {
   font-size: $font-size-16;
   font-weight: 400;
   font-style: normal;
+  // overflow-x: hidden; //можно ли так делать?
 }
 
 .body {
@@ -23,7 +24,7 @@ html {
     #52146f 66.06%,
     #19198d 88.16%
   );
-  min-height: 7275px;
+  min-height: 100%; //TODO изменить высоту
 
   background-repeat: no-repeat;
 }

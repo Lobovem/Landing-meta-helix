@@ -1,0 +1,12 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.social {
+  display: flex;
+  gap: 25px;
+  &__link {
+  }
+
+  &__img {
+  }
+}

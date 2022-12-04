@@ -1,0 +1,162 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.navbar {
+  z-index: 10;
+
+  &__list {
+    @include unlist;
+    display: flex;
+    gap: 50px;
+
+    @include lg {
+      position: absolute;
+      top: 0;
+      right: -210px;
+
+      display: none;
+
+      width: 210px;
+      height: 110vh;
+      padding: $gap;
+
+      background-color: $color-white;
+    }
+    &.active {
+      @include lg {
+        display: flex;
+        gap: 65px;
+
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__item {
+    &.active {
+      position: relative;
+      // &::after {
+      //   position: absolute; //посмотреть реализацию. Работает не правильно
+      //   content: "";
+      //   width: 105px;
+      //   height: 5px;
+      //   left: -6%;
+      //   right: 0;
+      //   bottom: -145%;
+      //   background: #111631;
+      // }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-weight: $font-weight-700;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: $color-main;
+  }
+
+  &__burger {
+    position: relative;
+
+    width: 18px;
+    height: 30px;
+
+    cursor: pointer;
+
+    @include lg-min {
+      display: none;
+    }
+    @include xs {
+      width: 18px;
+      height: 30px;
+    }
+
+    span {
+      position: absolute;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 6%;
+
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+
+      opacity: 1;
+      background-color: gray;
+
+      @include xs {
+        height: 6%;
+      }
+
+      &:nth-of-type(1) {
+        top: 0;
+      }
+
+      &:nth-of-type(2) {
+        top: 6px;
+
+        @include xs {
+          top: 6px;
+        }
+      }
+
+      &:nth-of-type(3) {
+        top: 12px;
+
+        @include xs {
+          top: 12px;
+        }
+      }
+    }
+
+    &.active span {
+      &:nth-of-type(1) {
+        top: 6px;
+
+        transform: rotate(135deg);
+      }
+
+      &:nth-of-type(2) {
+        left: 0;
+
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        top: 6px;
+
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}
+
+.header {
+  &.active {
+    position: relative;
+
+    width: 100vw;
+    height: 110vh;
+
+    transform: translateX(-210px);
+
+    &::before {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+
+      width: 100vw;
+      height: 100vh;
+
+      content: "";
+
+      opacity: 0.6;
+      background: $color-black;
+    }
+  }
+}
