@@ -1,0 +1,17 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.button {
+  min-width: 244.25px;
+  height: 45px;
+  background: #908ab1;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: $font-weight-700;
+  line-height: 16px;
+  border: none;
+  color: $color-black;
+  cursor: pointer; //TODO не работает курсор?
+}

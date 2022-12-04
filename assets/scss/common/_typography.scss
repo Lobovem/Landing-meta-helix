@@ -11,7 +11,7 @@
 html {
   font-family: $font-family;
   font-size: $font-size-16;
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -23,8 +23,9 @@ html {
     #52146f 66.06%,
     #19198d 88.16%
   );
-  background-repeat: no-repeat;
   min-height: 7275px;
+
+  background-repeat: no-repeat;
 }
 
 a {

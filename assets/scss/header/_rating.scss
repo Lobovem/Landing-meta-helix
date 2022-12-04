@@ -1,0 +1,86 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.rating {
+  position: relative;
+
+  &::after {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: linear-gradient(
+      180deg,
+      #cacaca 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    mix-blend-mode: multiply;
+    box-shadow: 0px 28px 23px 11px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 20px;
+  }
+
+  &__header {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    gap: 130px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 42px;
+    min-height: 220px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -126%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url(../img/decor-spiral.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  &__decor-box {
+    display: flex;
+    gap: 35px;
+  }
+  &__decor {
+  }
+
+  &__title {
+    font-size: $font-size-32;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    color: $color-accent;
+  }
+
+  &__item {
+  }
+
+  &__footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    background: $color-white;
+    mix-blend-mode: normal;
+    border-radius: 0px 0px 20px 20px;
+    gap: 72px;
+    padding: 56px 100px;
+  }
+
+  &__footer-desc {
+    font-weight: $font-weight-500;
+    font-size: $font-size-20;
+    line-height: 38px;
+    text-align: justify;
+    letter-spacing: -0.01em;
+
+    color: $color-main;
+  }
+}
