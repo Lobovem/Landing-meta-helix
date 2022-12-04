@@ -19,6 +19,10 @@
   //   mix-blend-mode: multiply;
   // }
 
+  @include sm {
+    padding-top: 20px;
+  }
+
   &__decor-left {
     position: absolute;
     bottom: -8%;
@@ -36,6 +40,14 @@
 
   &__actions {
     margin-bottom: 240px;
+
+    @include lg {
+      margin-bottom: 150px;
+    }
+
+    @include sm {
+      margin-bottom: 85px;
+    }
   }
 
   &__title {
@@ -60,6 +72,16 @@
     span {
       font-weight: $font-weight-700;
     }
+
+    @include md {
+      font-size: $font-size-32;
+    }
+
+    @include sm {
+      font-size: $font-size-24;
+      line-height: 48px;
+      margin-bottom: 30px;
+    }
   }
 
   &__decor-sm {
@@ -68,6 +90,10 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 50px;
+
+    @include sm {
+      margin-bottom: 40px;
+    }
   }
 
   &__button {
@@ -75,6 +101,14 @@
     margin-left: auto;
     display: flex;
     margin-bottom: 440px;
+
+    @include lg {
+      margin-bottom: 350px;
+    }
+
+    @include md {
+      margin-bottom: 184px;
+    }
   }
 
   &__info {

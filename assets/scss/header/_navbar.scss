@@ -11,14 +11,15 @@
 
     @include lg {
       position: absolute;
-      top: 0;
-      right: -210px;
+      top: 20px;
+      right: -100vw;
 
       display: none;
 
-      width: 210px;
-      height: 110vh;
+      width: 100%;
+      min-height: 452px;
       padding: $gap;
+      border-radius: 26px;
 
       background-color: $color-white;
     }
@@ -26,7 +27,8 @@
       @include lg {
         display: flex;
         gap: 65px;
-
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
       }
     }
@@ -34,7 +36,7 @@
 
   &__item {
     &.active {
-      position: relative;
+      // position: relative;
       // &::after {
       //   position: absolute; //посмотреть реализацию. Работает не правильно
       //   content: "";
@@ -140,23 +142,23 @@
     position: relative;
 
     width: 100vw;
-    height: 110vh;
+    height: 452px;
 
-    transform: translateX(-210px);
+    transform: translateX(-100vw);
 
-    &::before {
-      position: absolute;
-      z-index: 10;
-      top: 0;
-      left: 0;
+    // &::before {
+    //   position: absolute;
+    //   z-index: 10;
+    //   top: 0;
+    //   left: 0;
 
-      width: 100vw;
-      height: 100vh;
+    //   width: 100vw;
+    //   height: 452px;
 
-      content: "";
+    //   content: "";
 
-      opacity: 0.6;
-      background: $color-black;
-    }
+    //   opacity: 0.6;
+    //   background: $color-black;
+    // }
   }
 }

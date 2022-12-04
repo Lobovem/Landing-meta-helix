@@ -26,12 +26,27 @@
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr;
-    gap: 130px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px;
     justify-items: center;
     align-items: center;
-    padding: 0 42px;
+    padding: 30px;
     min-height: 220px;
+
+    @include xl-min {
+      gap: 60px;
+    }
+
+    @include xl {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 40px;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      padding-top: 60px;
+      padding-bottom: 75px;
+    }
 
     &::before {
       position: absolute;
@@ -43,14 +58,47 @@
       background: url(../img/decor-spiral.png);
       background-repeat: no-repeat;
       background-position: 50% 50%;
+
+      @include xl {
+        top: -120%;
+        background-size: 270px;
+      }
+
+      @include lg {
+        top: -110%;
+        background-size: 150px;
+      }
+
+      @include sm {
+        top: -103%;
+
+        // background-size: 100px;
+      }
     }
   }
 
   &__decor-box {
     display: flex;
     gap: 35px;
+    // max-width: 170px;
+
+    span {
+      font-weight: 400;
+    }
+
+    @include sm {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      margin-bottom: 45px;
+    }
   }
   &__decor {
+    max-width: 26px;
+    @include sm {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__title {
@@ -58,6 +106,7 @@
     line-height: 38px;
     letter-spacing: -0.01em;
     color: $color-accent;
+    max-width: 170px;
   }
 
   &__item {
@@ -72,6 +121,28 @@
     border-radius: 0px 0px 20px 20px;
     gap: 72px;
     padding: 56px 100px;
+
+    @include xl {
+      padding: 56px 40px;
+    }
+
+    @include xl {
+      gap: 40px;
+    }
+    @include md {
+      flex-direction: column;
+    }
+
+    @include xs {
+      padding: 20px;
+    }
+  }
+
+  &__footer-decor {
+    @include md {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__footer-desc {
@@ -85,6 +156,11 @@
 
     span {
       font-weight: 700; //TODO пресмотреть толщину шрифтов
+    }
+
+    @include xs {
+      font-size: $font-size-14;
+      line-height: 30px;
     }
   }
 }
