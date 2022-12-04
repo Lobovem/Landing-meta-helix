@@ -1,0 +1,80 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.footer {
+  background: $color-black;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: #e6e8ec;
+    height: 1px;
+    width: 100%;
+    bottom: 100px;
+
+    @include lg {
+      bottom: 60px;
+    }
+  }
+  &_copyright {
+    font-size: $font-size-12;
+    line-height: 20px;
+    color: $color-white;
+    text-align: center;
+    padding: 40px;
+    @include lg {
+      padding: 20px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    gap: 154px;
+    align-items: center;
+
+    @include lg {
+      gap: 70px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: $font-size-48;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.035em;
+    color: #f4f5f6;
+    max-width: 136px;
+    padding: 105px 0;
+    position: relative;
+
+    @include lg {
+      font-size: $font-size-36;
+      line-height: 40px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 40px;
+
+      background: #353945;
+      border-radius: 2px;
+      right: -90px;
+
+      @include lg {
+        right: -27px;
+      }
+    }
+
+    @include lg {
+      padding: 50px 0;
+    }
+  }
+
+  &__social {
+  }
+}
