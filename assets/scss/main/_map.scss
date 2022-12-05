@@ -4,12 +4,14 @@
 .map {
   &__decor-box {
     margin-bottom: 120px;
+    position: relative;
+    z-index: 1;
     @include md {
       margin-bottom: 80px;
     }
   }
 
-  &__decor-right {
+  &__decor-left {
     @include md {
       width: 70%;
     }
@@ -23,6 +25,7 @@
   }
 
   &__title {
+    z-index: 1;
   }
 
   &__item-first-wrap {
