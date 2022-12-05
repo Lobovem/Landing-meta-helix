@@ -1,0 +1,37 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.map {
+  &__decor-box {
+    margin-bottom: 120px;
+  }
+
+  &__decor-right {
+  }
+
+  &__decor-title-box {
+    margin-bottom: 60px;
+  }
+
+  &__decor {
+  }
+
+  &__title {
+  }
+
+  &__item-first-wrap {
+    display: flex;
+    margin-bottom: 55px;
+    gap: 180px;
+    justify-content: start;
+  }
+
+  &__item {
+  }
+
+  &__item-second-wrap {
+    display: flex;
+    gap: 180px;
+    justify-content: end;
+  }
+}
