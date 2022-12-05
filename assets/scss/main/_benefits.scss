@@ -1,0 +1,37 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.benefits {
+  &__decor-title-box {
+    position: relative;
+    margin-bottom: 60px;
+
+    // &::after {
+    //   position: absolute;
+    //   content: "";
+    //   border-top: 1px solid white;
+    //   width: 70%;
+    //   left: 438px;
+    //   right: 0;
+    //   top: 27px;
+    //   bottom: 0;
+    // }
+  }
+
+  &__decor {
+  }
+
+  &__title {
+  }
+
+  &__item-box {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1;
+    flex-basis: 350px;
+  }
+}
