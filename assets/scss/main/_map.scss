@@ -4,9 +4,15 @@
 .map {
   &__decor-box {
     margin-bottom: 120px;
+    @include md {
+      margin-bottom: 80px;
+    }
   }
 
   &__decor-right {
+    @include md {
+      width: 70%;
+    }
   }
 
   &__decor-title-box {
@@ -24,6 +30,13 @@
     margin-bottom: 55px;
     gap: 180px;
     justify-content: start;
+
+    @include sm {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
   }
 
   &__item {
@@ -33,5 +46,12 @@
     display: flex;
     gap: 180px;
     justify-content: end;
+
+    @include sm {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
   }
 }

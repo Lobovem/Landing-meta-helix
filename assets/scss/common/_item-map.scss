@@ -9,15 +9,29 @@
   border-radius: 20px;
   position: relative;
 
-  // &:nth-child(1) {
+  // &:nth-child(2) {
   //   &::before {
-  //     background-image: url(../img/connector-1.svg);
+  //     background-image: url(../img/connector-sm.svg);
   //     background-repeat: no-repeat;
   //     content: "";
-  //     left: 0;
+  //     left: 155px;
   //     right: 0;
-  //     top: 0;
+  //     top: -65px;
   //     bottom: 0;
+
+  //     position: absolute;
+  //   }
+  // }
+  // &:nth-child(3) {
+  //   &::before {
+  //     background-image: url(../img/connector-sm.svg);
+  //     background-repeat: no-repeat;
+  //     content: "";
+  //     left: 155px;
+  //     right: 0;
+  //     top: -65px;
+  //     bottom: 0;
+
   //     position: absolute;
   //   }
   // }
@@ -45,13 +59,35 @@
     right: 77px;
     position: absolute;
 
+    @include md {
+      display: none;
+    }
+
     &--second {
       right: 166px;
+      @include md {
+        display: none;
+      }
     }
 
     &--first {
       top: -130px;
       left: 76px;
+      @include md {
+        display: none;
+      }
+    }
+  }
+
+  &__connector-sm {
+    position: relative;
+    bottom: -93px;
+    left: 160px;
+    @include md-min {
+      display: none;
+    }
+    @include md {
+      display: block;
     }
   }
 
@@ -88,7 +124,7 @@
 
   &__desc {
     font-weight: 400;
-    font-size: $font-size-24;
+    font-size: $font-size-20;
     line-height: 30px;
     color: $color-white;
   }

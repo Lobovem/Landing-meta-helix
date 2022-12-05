@@ -4,13 +4,6 @@
 .art {
   position: relative;
   &__decor {
-    @include md {
-      display: flex;
-      margin-right: auto;
-      margin-left: auto;
-      padding-left: 0;
-      margin-bottom: 20px;
-    }
   }
 
   &__decor-right {
@@ -22,14 +15,12 @@
     @include xl {
       height: 275px;
     }
-
-    @include md {
-    }
   }
 
   &__decor-box {
     position: relative;
     top: 255px;
+    margin-top: -150px;
 
     @include xl {
       top: 170px;
@@ -37,6 +28,7 @@
 
     @include md {
       top: 50px;
+      margin-top: 0px;
     }
     &:after {
       content: "";
@@ -66,15 +58,6 @@
     display: inline-block;
     z-index: 1;
     width: 80%;
-
-    @include md {
-      display: flex;
-      margin-right: auto;
-      margin-left: auto;
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 30px;
-    }
   }
 
   &__box {
