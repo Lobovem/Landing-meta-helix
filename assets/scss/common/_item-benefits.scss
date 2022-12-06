@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .item-benefits {
-  position: relative;
+  position: relative; //TODO Сделал benefits но хвоты по border и Item были одной высоты
   &::before {
     content: "";
     left: 0;

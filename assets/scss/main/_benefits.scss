@@ -2,6 +2,33 @@
 @use "../mixins" as *;
 
 .benefits {
+  &__decor-right {
+    margin-left: auto;
+    display: block;
+    position: relative;
+    right: -170px;
+    margin-bottom: 100px;
+
+    @include xl {
+      max-width: 550px;
+    }
+    @include md {
+      max-width: 450px;
+      right: -100px;
+    }
+
+    @include xs {
+    }
+  }
+  // position: relative; //TODO Сделал benefits но хвоты по border и Item были одной высоты
+  // &::before {
+  //   content: "";
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   background-image: url(../img/decor-spiral-right-lg.png);
+  //   position: absolute;
   &__decor-title-box {
     position: relative;
     margin-bottom: 60px;
