@@ -6,6 +6,10 @@
     position: relative;
     margin-bottom: 60px;
 
+    @include md {
+      margin-bottom: 30px;
+    }
+
     // &::after {
     //   position: absolute;
     //   content: "";
@@ -28,6 +32,12 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    margin-bottom: 100px;
+
+    @include md {
+      border-top: 1px solid $color-white;
+      padding-top: 40px;
+    }
   }
 
   &__item {

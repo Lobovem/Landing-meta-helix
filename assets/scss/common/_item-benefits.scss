@@ -36,6 +36,11 @@ for containers
     line-height: 30px;
     color: $color-white;
     z-index: 1;
+
+    @include md {
+      font-size: $font-size-20;
+      line-height: 30px;
+    }
   }
 
   &__img {
@@ -43,7 +48,7 @@ for containers
   }
 
   &__desc {
-    padding: 30px 45px;
+    padding: 30px;
     font-weight: 500;
     line-height: 30px;
     letter-spacing: -0.01em;
@@ -56,5 +61,10 @@ for containers
     text-align: justify;
 
     z-index: 1;
+
+    @include md {
+      min-height: 125px;
+      padding: 20px;
+    }
   }
 }
