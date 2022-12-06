@@ -1,0 +1,128 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.includes {
+  &__box {
+    position: relative;
+    margin-bottom: 180px;
+
+    &::after {
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      background: linear-gradient(
+        180deg,
+        #cacaca 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      mix-blend-mode: multiply;
+      box-shadow: 0px 28px 23px 11px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+      border-radius: 20px;
+    }
+  }
+  &__header {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__decor-box {
+    display: flex;
+    gap: 35px;
+    z-index: 1;
+    position: relative;
+
+    span {
+      font-weight: 700;
+    }
+
+    @include md {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      margin-bottom: 45px;
+      align-items: center;
+    }
+  }
+  &__button {
+    z-index: 1;
+
+    @include md {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__decor {
+    max-width: 26px;
+    @include sm {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-32;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    color: $color-accent;
+    font-weight: 400;
+    max-width: 300px;
+  }
+
+  &__footer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    background: $color-white;
+    mix-blend-mode: normal;
+    border-radius: 0px 0px 20px 20px;
+    gap: 72px;
+    padding: 50px 100px;
+
+    @include xl {
+      padding: 56px 40px;
+    }
+
+    @include xl {
+      gap: 40px;
+    }
+    @include md {
+      flex-direction: column;
+    }
+
+    @include xs {
+      padding: 20px;
+    }
+  }
+
+  &__footer-decor {
+    @include md {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__footer-desc {
+    font-weight: $font-weight-500;
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: -0.01em;
+
+    color: $color-main;
+    flex: 1;
+
+    @include xs {
+      font-size: $font-size-14;
+      line-height: 30px;
+    }
+  }
+}

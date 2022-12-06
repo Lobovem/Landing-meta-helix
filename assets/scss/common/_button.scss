@@ -14,4 +14,8 @@
   border: none;
   color: $color-black;
   cursor: pointer; //TODO не работает курсор?
+
+  &--alt {
+    background: $color-white;
+  }
 }

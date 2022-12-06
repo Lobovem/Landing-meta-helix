@@ -8,6 +8,7 @@
     position: relative;
     right: -170px;
     margin-bottom: 100px;
+    z-index: 1;
 
     @include xl {
       max-width: 550px;
@@ -15,9 +16,6 @@
     @include md {
       max-width: 450px;
       right: -100px;
-    }
-
-    @include xs {
     }
   }
   // position: relative; //TODO Сделал benefits но хвоты по border и Item были одной высоты
