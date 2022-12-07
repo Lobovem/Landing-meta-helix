@@ -4,7 +4,7 @@
 .decor-title-box {
   display: flex;
 
-  @include md {
+  @include lg {
     flex-direction: column;
   }
 
@@ -13,7 +13,7 @@
     font-size: $font-size-36;
     line-height: 48px;
     color: $color-white;
-    @include md {
+    @include lg {
       display: flex;
       margin-right: auto;
       margin-left: auto;
@@ -24,11 +24,12 @@
   }
 
   &__img {
-    position: relative;
+    position: relative; //TODO пересмотреть классы переисполуземых блоков
     z-index: 1;
     margin-right: 35px;
     padding-left: 40px;
-    @include md {
+
+    @include lg {
       display: flex;
       margin-right: auto;
       margin-left: auto;

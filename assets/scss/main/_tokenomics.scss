@@ -6,6 +6,10 @@
     position: relative;
     padding: 50px 50px 30px 40px;
     margin-bottom: 100px;
+
+    @include lg {
+      padding: 30px;
+    }
     &::after {
       position: absolute;
       content: "";
@@ -32,12 +36,22 @@
     justify-content: space-between;
     position: relative;
     z-index: 1;
+    gap: 40px;
+
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__decor-title-box {
     margin-bottom: 30px;
     position: relative;
     z-index: 1;
+
+    @include lg {
+      flex-direction: column;
+    }
   }
 
   &__decor {
@@ -51,9 +65,15 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
-    padding-left: 50px;
-    margin-left: 10px;
-    border-left: 1px solid white;
+    @include lg-min {
+      padding-left: 50px;
+      margin-left: 10px;
+      border-left: 1px solid white;
+    }
+    @include lg {
+      border-bottom: 1px solid white;
+      text-align: center;
+    }
   }
 
   &__slider {
@@ -63,16 +83,68 @@
   &__slider-wrap {
     display: flex;
     margin-bottom: 30px;
+
+    @include lg {
+      justify-content: center;
+    }
+    @include lg {
+      // flex-direction: column;
+      // position: relative;
+      // &::after {
+      //   position: absolute;
+      //   content: "";
+      //   left: 0;
+      //   right: 0;
+      //   top: 0;
+      //   bottom: 0;
+      //   background-image: url(../img/button-right-alt.svg);
+      //   background-repeat: no-repeat;
+      // }
+
+      // &::before {
+      //   position: absolute;
+      //   content: "";
+      //   left: -50px;
+      //   right: 0;
+      //   top: 0;
+      //   bottom: 0;
+      //   background-image: url(../img/button-left-alt.svg);
+      //   background-repeat: no-repeat;
+      // }
+    }
   }
 
+  &__slider-button-wrap {
+    @include lg-min {
+      display: none; //TODO пересмотреть реализацию блока
+    }
+  }
   &__slider-button {
-    padding: 50px;
+    order: 1;
+    @include lg-min {
+    }
+
+    @include lg {
+    }
+
+    &--alt {
+      transform: rotate(-180deg);
+      order: 0;
+      @include lg-min {
+      }
+    }
     &.active {
       opacity: 0.2;
     }
   }
 
   &__slider-img {
+    padding: 0 40px;
+
+    @include sm {
+      padding: 0 20px;
+      max-width: 85%;
+    }
   }
 
   &__footer-text {
@@ -88,6 +160,10 @@
     margin-right: auto;
     margin-left: auto;
 
+    @include lg {
+      margin-bottom: 40px;
+    }
+
     span {
       font-weight: 700;
     }
@@ -95,6 +171,9 @@
 }
 
 .info-box-tokenomics {
+  max-width: 440px;
+  @include md {
+  }
   &__wrap {
   }
 
@@ -103,7 +182,14 @@
     font-size: 24px;
     line-height: 27px;
     color: #ffffff;
-    margin-bottom: 7px;
+
+    @include md-min {
+      margin-bottom: 7px;
+    }
+    @include md {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__desc {
@@ -112,20 +198,28 @@
     line-height: 40px;
     color: #ffffff;
     margin-bottom: 70px;
+
+    @include md {
+      font-size: 24px;
+      margin-bottom: 50px;
+      font-weight: 500;
+    }
   }
 
   &__title--alt {
     font-weight: 700;
     font-size: 65px;
     line-height: 48px;
-    /* identical to box height, or 74% */
-
-    display: flex;
-    align-items: center;
-
     color: #ffffff;
     margin-bottom: 25px;
     margin-top: 80px;
+
+    @include md {
+      margin-top: 50px;
+      font-size: 36px;
+      line-height: 48px;
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
@@ -134,8 +228,15 @@
     line-height: 27px;
     color: #ffffff;
 
+    @include lg {
+      margin-bottom: 50px;
+    }
+
     span {
       font-weight: 700;
+      @include md {
+        font-weight: 400;
+      }
     }
   }
 }
