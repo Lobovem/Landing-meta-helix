@@ -2,6 +2,7 @@
 @use "../mixins" as *;
 
 .features {
+  position: relative;
   // &__decor {
   //   margin-left: auto;
   //   display: block;
@@ -28,6 +29,11 @@
     }
   }
 
+  &__slider {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
   &__decor {
   }
 
@@ -35,7 +41,6 @@
   }
 
   &__item-box {
-    display: flex;
     gap: 30px;
     flex-wrap: wrap;
     margin-bottom: 100px;
@@ -62,5 +67,12 @@
     gap: 30px;
     flex-wrap: wrap;
     margin-bottom: 100px;
+  }
+
+  &__decor {
+    position: relative;
+    right: -55%;
+    top: -280px;
+    z-index: 0;
   }
 }
