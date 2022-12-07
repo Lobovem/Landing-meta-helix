@@ -5,6 +5,7 @@
   &__box {
     position: relative;
     margin-bottom: 180px;
+    margin-top: -315px;
 
     &::after {
       content: "";
@@ -75,7 +76,14 @@
     letter-spacing: -0.01em;
     color: $color-accent;
     font-weight: 400;
-    max-width: 300px;
+
+    @include xx-min {
+      max-width: 300px;
+    }
+
+    @include md {
+      font-size: 30px;
+    }
   }
 
   &__footer {

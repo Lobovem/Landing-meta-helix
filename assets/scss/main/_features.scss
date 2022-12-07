@@ -69,10 +69,10 @@
     margin-bottom: 100px;
   }
 
-  &__decor {
+  &__decor-main {
     position: relative;
     right: -55%;
     top: -280px;
-    z-index: 0;
+    z-index: 1;
   }
 }
