@@ -8,7 +8,7 @@
     margin-bottom: 100px;
 
     @include lg {
-      padding: 30px;
+      padding: 20px;
     }
     &::after {
       position: absolute;
@@ -46,11 +46,14 @@
 
   &__decor-title-box {
     margin-bottom: 30px;
+    margin-left: -30px;
+
     position: relative;
     z-index: 1;
 
     @include lg {
       flex-direction: column;
+      margin-left: 0;
     }
   }
 
@@ -71,8 +74,16 @@
       border-left: 1px solid white;
     }
     @include lg {
-      border-bottom: 1px solid white;
+      border-top: 1px solid $color-white;
+      border-bottom: 1px solid $color-white;
       text-align: center;
+      margin-bottom: 30px;
+      padding-top: 50px;
+    }
+
+    @include md {
+      padding-top: 35px;
+      margin-bottom: 0px;
     }
   }
 
@@ -171,7 +182,7 @@
 }
 
 .info-box-tokenomics {
-  max-width: 440px;
+  width: 100%;
   @include md {
   }
   &__wrap {
@@ -184,7 +195,7 @@
     color: #ffffff;
 
     @include md-min {
-      margin-bottom: 7px;
+      margin-bottom: 10px;
     }
     @include md {
       font-size: 16px;
@@ -201,7 +212,7 @@
 
     @include md {
       font-size: 24px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       font-weight: 500;
     }
   }
@@ -211,14 +222,16 @@
     font-size: 65px;
     line-height: 48px;
     color: #ffffff;
-    margin-bottom: 25px;
     margin-top: 80px;
 
+    @include md-min {
+      margin-bottom: 20px;
+    }
+
     @include md {
-      margin-top: 50px;
+      margin-top: 30px;
       font-size: 36px;
       line-height: 48px;
-      margin-bottom: 15px;
     }
   }
 
@@ -230,13 +243,19 @@
 
     @include lg {
       margin-bottom: 50px;
+      margin-right: auto;
+      margin-left: auto;
     }
 
+    @include md {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 27px;
+      max-width: 270px;
+      margin-bottom: 20px;
+    }
     span {
       font-weight: 700;
-      @include md {
-        font-weight: 400;
-      }
     }
   }
 }
