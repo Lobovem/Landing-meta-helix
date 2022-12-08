@@ -24,12 +24,11 @@
   &__title-box {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
     align-items: center;
     gap: 50px;
 
     @include md-min {
-      padding: 20px 40px;
+      padding: 20px 30px;
     }
 
     @include md {

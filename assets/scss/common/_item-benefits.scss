@@ -26,8 +26,12 @@ for containers
   &__title-box {
     display: flex;
     justify-content: space-between;
-    padding: 20px 45px;
+    padding: 20px 30px;
     align-items: center;
+
+    @include md {
+      padding: 20px;
+    }
   }
 
   &__title {

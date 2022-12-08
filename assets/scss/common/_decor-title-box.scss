@@ -27,7 +27,7 @@
     position: relative; //TODO пересмотреть классы переисполуземых блоков
     z-index: 1;
     margin-right: 35px;
-    padding-left: 40px;
+    padding-left: 30px;
 
     @include lg {
       display: flex;
