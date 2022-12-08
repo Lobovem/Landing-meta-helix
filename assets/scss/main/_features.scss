@@ -34,10 +34,51 @@
     margin-right: 10px;
   }
 
+  &__decor-title-box {
+    display: flex;
+    gap: 35px;
+    z-index: 1;
+    position: relative;
+
+    @include md-min {
+      padding-left: 40px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    @include md {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+  }
+
   &__decor {
+    max-width: 26px;
+    @include sm {
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+    color: $color-accent;
+
+    @include xx-min {
+      max-width: 300px;
+    }
+
+    @include md {
+      font-size: 30px;
+    }
   }
 
   &__item-box {

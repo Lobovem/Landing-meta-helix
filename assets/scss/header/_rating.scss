@@ -28,7 +28,7 @@
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 60px;
+    gap: 55px;
     align-items: center;
     padding: 30px 40px;
     min-height: 220px;
@@ -39,10 +39,14 @@
 
     @include xl {
       grid-template-columns: 1fr 1fr;
-      row-gap: 40px;
+      gap: 40px 200px;
     }
 
-    @include sm {
+    @include md {
+      gap: 40px;
+    }
+
+    @include md {
       grid-template-columns: 1fr;
       padding-top: 60px;
       padding-bottom: 60px;
@@ -69,7 +73,7 @@
         background-size: 150px;
       }
 
-      @include sm {
+      @include md {
         top: -103%;
 
         // background-size: 100px;
@@ -80,13 +84,17 @@
   &__decor-box {
     display: flex;
     gap: 35px;
+
+    @include xl {
+      gap: 25px;
+    }
     // max-width: 170px;
 
     span {
       font-weight: 400;
     }
 
-    @include sm {
+    @include md {
       flex-direction: column;
       gap: 20px;
       text-align: center;
@@ -96,7 +104,7 @@
   }
   &__decor {
     max-width: 26px;
-    @include sm {
+    @include md {
       margin-right: auto;
       margin-left: auto;
     }
