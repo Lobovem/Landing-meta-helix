@@ -7,13 +7,17 @@
     position: relative;
     z-index: 1;
     @include md {
-      margin-bottom: 80px;
+      margin-bottom: 100px;
+    }
+
+    @include sm {
+      bottom: -20px;
     }
   }
 
   &__decor-left {
-    @include md {
-      width: 70%;
+    @include sm {
+      height: 100px;
     }
   }
 

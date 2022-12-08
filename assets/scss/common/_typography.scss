@@ -19,13 +19,41 @@ html {
 .body {
   overflow-x: hidden;
 
-  background: linear-gradient(
-    197.23deg,
-    #371c48 3.55%,
-    #10107b 32.04%,
-    #52146f 66.06%,
-    #19198d 88.16%
-  );
+  position: relative;
+
+  &::after {
+    position: fixed;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: linear-gradient(
+      185.23deg,
+      #52146f -15%,
+      #10127b 32.04%,
+      #52146f 66.06%,
+      #19198d 88.16%
+    );
+    z-index: -1;
+
+    // background-image: url(../img/background-main-decor.png);
+    // background-repeat: no-repeat;
+    // mix-blend-mode: multiply;
+    // opacity: 0.5;
+    // padding-top: 150px;
+    // z-index: 1;
+    // position: absolute;
+    // width: 100vw;
+  }
+
+  // background: linear-gradient(
+  //   197.23deg,
+  //   #371c48 3.55%,
+  //   #10107b 32.04%,
+  //   #52146f 66.06%,
+  //   #19198d 88.16%
+  // );
   min-height: 100%; //TODO изменить высоту
 
   background-repeat: no-repeat;

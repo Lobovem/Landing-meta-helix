@@ -4,12 +4,12 @@
 .main {
   &__decor {
     // background-image: url(../img/background-main-decor.png);
-    mix-blend-mode: multiply;
-    opacity: 0.5;
-    padding-top: 150px;
-    z-index: -1;
-    position: absolute;
-    width: 100vw;
+    // mix-blend-mode: multiply;
+    // opacity: 0.5;
+    // padding-top: 150px;
+    // z-index: 1;
+    // position: absolute;
+    // width: 100vw;
   }
   overflow-x: hidden;
 }

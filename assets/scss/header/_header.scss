@@ -46,7 +46,7 @@
     }
 
     @include sm {
-      margin-bottom: 85px;
+      margin-bottom: 100px;
     }
   }
 
@@ -57,6 +57,20 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: $color-accent;
+
+    @include lg {
+      font-size: 100px;
+    }
+
+    @include md {
+      font-size: 80px;
+      line-height: 28px;
+    }
+
+    @include sm {
+      font-size: 50px;
+      line-height: 0px;
+    }
   }
 
   &__title-desc {
