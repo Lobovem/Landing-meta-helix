@@ -7,8 +7,9 @@
   &__list {
     display: flex;
 
-    gap: 50px;
+    gap: 20px;
     @include unlist;
+
     @include lg {
       position: absolute;
       top: 20px;
@@ -35,31 +36,23 @@
     }
   }
 
-  &__item {
-    &.active {
-      // position: relative;
-      // &::after {
-      //   position: absolute; //посмотреть реализацию. Работает не правильно
-      //   content: "";
-      //   width: 105px;
-      //   height: 5px;
-      //   left: -6%;
-      //   right: 0;
-      //   bottom: -145%;
-      //   background: #111631;
-      // }
-    }
-  }
-
   &__link {
-    display: block;
-    display: flex;
     align-items: center;
 
     color: $color-main;
+    font-weight: $font-weight-500;
 
-    font-weight: $font-weight-700;
     line-height: 21px;
+    padding: 20px;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    &.active {
+      font-weight: $font-weight-700;
+      border-bottom: 4px solid $color-main;
+    }
   }
 
   &__burger {
@@ -148,20 +141,5 @@
     height: 452px;
 
     transform: translateX(-100vw);
-
-    // &::before {
-    //   position: absolute;
-    //   z-index: 10;
-    //   top: 0;
-    //   left: 0;
-
-    //   width: 100vw;
-    //   height: 452px;
-
-    //   content: "";
-
-    //   opacity: 0.6;
-    //   background: $color-black;
-    // }
   }
 }

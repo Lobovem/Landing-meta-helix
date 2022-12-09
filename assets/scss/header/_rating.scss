@@ -21,9 +21,9 @@
 
     border-radius: 20px;
     background: linear-gradient(
-    180deg,
-    #cacaca 0%,
-    rgba(255, 255, 255, 0) 100%
+      180deg,
+      #cacaca 0%,
+      rgba(255, 255, 255, 0) 100%
     );
     box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
@@ -44,7 +44,7 @@
     gap: 55px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     @include xl-min {
-      gap: 60px;
+      gap: 70px;
     }
     @include xl {
       gap: 40px 200px;
@@ -62,16 +62,16 @@
 
     &::before {
       position: absolute;
-      top: -126%;
-      right: 0;
+      top: -203px;
+      right: 50%;
       bottom: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
 
       content: "";
 
       background: url(../img/decor-spiral.png);
       background-repeat: no-repeat;
-      background-position: 50% 50%;
 
       @include xl {
         top: -120%;
@@ -85,8 +85,6 @@
       }
       @include md {
         top: -103%;
-
-        // background-size: 100px;
       }
     }
   }
@@ -97,7 +95,8 @@
     gap: 35px;
     @include xl {
       gap: 25px;
-    }
+    }
+
     @include md {
       align-items: center;
       flex-direction: column;
@@ -133,8 +132,6 @@
     font-size: $font-size-32;
     line-height: 38px;
   }
-
-
 
   &__footer {
     position: relative;

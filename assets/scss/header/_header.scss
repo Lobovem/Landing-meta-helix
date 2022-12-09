@@ -5,56 +5,47 @@
   position: relative;
 
   padding-top: 54px;
-  // overflow-x: hidden;
-  // &::after {
-  //   //TODO пресмотреть позиции декора
-  //   content: "";
-  //   position: absolute;
-  //   background: url(../img/decor-right.png);
-  //   background-repeat: no-repeat;
-  //   top: 38.5%;
-  //   left: 59%;
-  //   right: 0;
-  //   bottom: -20%;
-  //   // width: 100vw;
-  //   mix-blend-mode: multiply;
-  // }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../img/decor-right.png);
+    background-repeat: no-repeat;
+    top: 767px;
+
+    right: 0;
+    bottom: -30%;
+    mix-blend-mode: multiply;
+
+    @media (min-width: 1540.8px) {
+      left: 70%;
+    }
+
+    @media (max-width: 1540.8px) {
+      left: 57%;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../img/decor-left.png);
+    background-repeat: no-repeat;
+    top: 715px;
+    left: -200px;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+    @include lg {
+      display: none;
+    }
+  }
 
   @include sm {
     padding-top: 20px;
-  }
-
-  &__decor-left {
-    position: absolute;
-    top: 715px;
-    // left: -190px;
-    left: -12%;
-
-    @include ul {
-      left: -20%;
-    }
-    @include xl {
-      left: -25%;
-    }
-    @include lg {
-      display: none;
-    }
-    mix-blend-mode: multiply;
-  }
-  &__decor-right {
-    position: absolute;
-    // overflow-x: hidden;
-    // top: 43%;
-    top: 765px;
-    // right: -165px;
-    right: -145px;
-
-    display: none;
-
-    @include lg {
-      display: none;
-    }
-    mix-blend-mode: multiply;
   }
 
   &__actions {
@@ -69,7 +60,7 @@
   }
 
   &__title {
-    text-align: center;
+    position: relative;
     text-align: center;
     letter-spacing: -0.01em;
     text-transform: uppercase;
@@ -77,6 +68,18 @@
     color: $color-accent;
 
     font-size: 150px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../img/decor-title-main.svg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
 
     @include lg {
       font-size: 100px;
@@ -147,4 +150,3 @@
     }
   }
 }
-
