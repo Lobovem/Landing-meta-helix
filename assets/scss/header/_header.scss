@@ -4,6 +4,7 @@
 .header {
   padding-top: 54px;
   position: relative;
+  // overflow-x: hidden;
 
   // &::after {
   //   //TODO пресмотреть позиции декора
@@ -25,17 +26,37 @@
 
   &__decor-left {
     position: absolute;
-    bottom: -8%;
+    top: 715px;
+    // left: -190px;
     left: -12%;
     mix-blend-mode: multiply;
+
+    @include ul {
+      left: -20%;
+    }
+
+    @include xl {
+      left: -25%;
+    }
+
+    @include lg {
+      display: none;
+    }
   }
   &__decor-right {
+    display: none;
+
     position: absolute;
-    bottom: -43%;
-    right: 0;
-    // width: 40vw;
-    // height: 100%;
+    // overflow-x: hidden;
+    // top: 43%;
+    top: 765px;
+    // right: -165px;
+    right: -145px;
+
     mix-blend-mode: multiply;
+    @include lg {
+      display: none;
+    }
   }
 
   &__actions {

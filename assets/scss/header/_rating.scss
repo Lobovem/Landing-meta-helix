@@ -3,7 +3,11 @@
 
 .rating {
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 160px;
+
+  @include md {
+    margin-bottom: 100px;
+  }
 
   &::after {
     content: "";

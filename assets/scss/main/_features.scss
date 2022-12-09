@@ -3,26 +3,24 @@
 
 .features {
   position: relative;
-  // &__decor {
-  //   margin-left: auto;
-  //   display: block;
-  //   position: relative;
-  //   right: -170px;
-  //   margin-bottom: 100px;
-  //   z-index: 1;
 
-  //   @include xl {
-  //     max-width: 550px;
-  //   }
-  //   @include md {
-  //     max-width: 450px;
-  //     right: -100px;
-  //   }
-  // }
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    mix-blend-mode: soft-light;
+    opacity: 0.25;
+    box-shadow: 0px 4px 23px 11px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
 
   &__decor-title-box {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 
     @include md {
       margin-bottom: 30px;
@@ -42,6 +40,7 @@
 
     @include md-min {
       padding-left: 30px;
+      padding-top: 135px;
     }
 
     span {
@@ -52,7 +51,8 @@
       flex-direction: column;
       gap: 20px;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 50px;
+      padding-top: 60px;
       align-items: center;
     }
   }
@@ -117,5 +117,9 @@
     right: -55%;
     top: -280px;
     z-index: 1;
+
+    @include xx {
+      right: -45%;
+    }
   }
 }

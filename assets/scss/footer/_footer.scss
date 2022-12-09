@@ -11,20 +11,16 @@
     background: #e6e8ec;
     height: 1px;
     width: 100%;
-    bottom: 100px;
-
-    @include lg {
-      bottom: 60px;
-    }
+    top: 180px;
   }
-  &_copyright {
+  &__copyright {
     font-size: $font-size-12;
     line-height: 20px;
     color: $color-white;
     text-align: center;
     padding: 40px;
     @include lg {
-      padding: 20px;
+      padding: 40px 20px 40px 20px;
     }
   }
 

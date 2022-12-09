@@ -56,24 +56,47 @@
 
   &__connector {
     top: 122px;
-    right: 77px;
     position: absolute;
 
-    @include md {
+    @media (min-width: 1540.8px) {
+      right: 55px;
+    }
+
+    @media (max-width: 1540.5px) {
+      right: 77px;
+    }
+
+    @include ul {
       display: none;
     }
 
     &--second {
-      right: 166px;
-      @include md {
+      @media (min-width: 1540.8px) {
+        right: 145px;
+      }
+
+      @media (max-width: 1540.5px) {
+        right: 165px;
+      }
+
+      @include ul {
         display: none;
       }
     }
 
     &--first {
       top: -130px;
-      left: 76px;
-      @include md {
+      // left: 76px;
+
+      @media (min-width: 1540.8px) {
+        left: 55px;
+      }
+
+      @media (max-width: 1540.8px) {
+        left: 76px;
+      }
+
+      @include ul {
         display: none;
       }
     }
@@ -83,10 +106,10 @@
     position: relative;
     bottom: -93px;
     left: 160px;
-    @include md-min {
+    @include ul-min {
       display: none;
     }
-    @include md {
+    @include ul {
       display: block;
     }
   }

@@ -36,19 +36,14 @@ html {
       #52146f 66.06%,
       #19198d 88.16%
     );
+    background-repeat: no-repeat;
     z-index: -1;
   }
-
-  min-height: 100%; //TODO изменить высоту
-
-  background-repeat: no-repeat;
 }
 
 .page {
   position: relative;
   &::after {
-    // background-size: contain;
-    // width: 100%;
     @media (min-width: 1900px) {
       background-size: cover;
       background-position: 50% 25%;

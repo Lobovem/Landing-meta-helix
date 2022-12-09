@@ -4,8 +4,12 @@
 .includes {
   &__box {
     position: relative;
-    margin-bottom: 180px;
+    padding-bottom: 260px;
     margin-top: -315px;
+
+    @include md {
+      padding-bottom: 170px;
+    }
 
     &::after {
       content: "";

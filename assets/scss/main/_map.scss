@@ -6,6 +6,7 @@
     margin-bottom: 120px;
     position: relative;
     z-index: 1;
+    top: 20px;
     @include md {
       margin-bottom: 100px;
     }
@@ -38,7 +39,7 @@
     gap: 180px;
     justify-content: start;
 
-    @include sm {
+    @include ul {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -54,7 +55,7 @@
     gap: 180px;
     justify-content: end;
 
-    @include sm {
+    @include ul {
       flex-direction: column;
       justify-content: center;
       align-items: center;
