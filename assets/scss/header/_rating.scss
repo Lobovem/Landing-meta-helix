@@ -55,7 +55,7 @@
     }
     @include md {
       padding-top: 60px;
-      padding-bottom: 60px;
+      padding-bottom: 80px;
 
       grid-template-columns: 1fr;
     }
@@ -63,10 +63,9 @@
     &::before {
       position: absolute;
       top: -203px;
-      right: 50%;
+      right: 0;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 35%; //TODO отцентровать
 
       content: "";
 
@@ -74,64 +73,45 @@
       background-repeat: no-repeat;
 
       @include xl {
-        top: -120%;
+        top: -155px;
 
         background-size: 270px;
       }
       @include lg {
-        top: -110%;
+        top: -87px;
 
         background-size: 150px;
       }
-      @include md {
-        top: -103%;
-      }
     }
   }
 
-  &__decor-box {
-    display: flex;
-
-    gap: 35px;
-    @include xl {
-      gap: 25px;
-    }
+  &__decor-title-box {
+    position: relative;
+    z-index: 1;
 
     @include md {
-      align-items: center;
-      flex-direction: column;
-
       margin-bottom: 45px;
-
-      text-align: center;
-
-      gap: 20px;
-    }
-    // max-width: 170px;
-
-    span {
-      font-weight: 400;
     }
   }
-  &__decor {
-    max-width: 26px;
+  // &__decor {
+  //   max-width: 26px;
 
-    @include md {
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
+  //   @include md {
+  //     margin-right: auto;
+  //     margin-left: auto;
+  //   }
+  // }
 
-  &__title {
-    max-width: 170px;
+  // &__title {
+  //   max-width: 170px;
 
-    letter-spacing: -0.01em;
+  //   letter-spacing: -0.01em;
 
-    color: $color-accent;
+  //   color: $color-accent;
 
-    font-size: $font-size-32;
-    line-height: 38px;
-  }
+  //   font-size: $font-size-32;
+  //   line-height: 38px;
+  // }
 
   &__footer {
     position: relative;

@@ -23,9 +23,9 @@
 
       border-radius: 20px;
       background: linear-gradient(
-      180deg,
-      #cacaca 0%,
-      rgba(255, 255, 255, 0) 100%
+        180deg,
+        #cacaca 0%,
+        rgba(255, 255, 255, 0) 100%
       );
       box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
@@ -49,18 +49,18 @@
     position: relative;
     z-index: 1;
 
-    display: flex;
+    // display: flex;
 
-    gap: 35px;
+    // gap: 35px;
     @include md {
-      align-items: center;
-      flex-direction: column;
+      // align-items: center;
+      // flex-direction: column;
 
       margin-bottom: 70px;
 
-      text-align: center;
+      // text-align: center;
 
-      gap: 20px;
+      // gap: 20px;
     }
 
     span {
