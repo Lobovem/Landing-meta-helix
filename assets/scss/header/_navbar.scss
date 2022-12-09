@@ -5,10 +5,10 @@
   z-index: 10;
 
   &__list {
-    @include unlist;
     display: flex;
-    gap: 50px;
 
+    gap: 50px;
+    @include unlist;
     @include lg {
       position: absolute;
       top: 20px;
@@ -19,17 +19,18 @@
       width: 100%;
       min-height: 452px;
       padding: $gap;
-      border-radius: 26px;
 
+      border-radius: 26px;
       background-color: $color-white;
     }
     &.active {
       @include lg {
         display: flex;
-        gap: 65px;
-        justify-content: center;
         align-items: center;
         flex-direction: column;
+        justify-content: center;
+
+        gap: 65px;
       }
     }
   }
@@ -52,11 +53,13 @@
 
   &__link {
     display: block;
-    font-weight: $font-weight-700;
-    line-height: 21px;
     display: flex;
     align-items: center;
+
     color: $color-main;
+
+    font-weight: $font-weight-700;
+    line-height: 21px;
   }
 
   &__burger {

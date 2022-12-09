@@ -19,9 +19,6 @@
   }
 
   &__indicator {
-    @include md {
-      display: none;
-    }
     width: 40px;
     height: 40px;
 
@@ -30,6 +27,10 @@
     border-radius: 20px;
     background-image: url(../img/button-right.svg);
     background-position: 50% 50%;
+
+    @include md {
+      display: none;
+    }
 
     &.active {
       opacity: 0.25;

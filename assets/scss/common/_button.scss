@@ -2,18 +2,22 @@
 @use "../mixins" as *;
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   min-width: 244.25px;
   height: 45px;
-  background: #908ab1;
+
+  cursor: pointer; //TODO не работает курсор?
+
+  color: $color-black;
+  border: none;
   border-radius: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #908ab1;
+
   font-weight: $font-weight-700;
   line-height: 16px;
-  border: none;
-  color: $color-black;
-  cursor: pointer; //TODO не работает курсор?
 
   &--alt {
     background: $color-white;

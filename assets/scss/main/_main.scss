@@ -2,6 +2,7 @@
 @use "../mixins" as *;
 
 .main {
+  overflow-x: hidden;
   &__decor {
     // background-image: url(../img/background-main-decor.png);
     // mix-blend-mode: multiply;
@@ -11,5 +12,4 @@
     // position: absolute;
     // width: 100vw;
   }
-  overflow-x: hidden;
 }

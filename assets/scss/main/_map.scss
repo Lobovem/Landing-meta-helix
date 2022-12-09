@@ -3,14 +3,15 @@
 
 .map {
   &__decor-box {
-    margin-bottom: 120px;
     position: relative;
     z-index: 1;
     top: 20px;
+
+    margin-bottom: 120px;
+
     @include md {
       margin-bottom: 100px;
     }
-
     @include sm {
       bottom: -20px;
     }
@@ -26,8 +27,7 @@
     margin-bottom: 60px;
   }
 
-  &__decor {
-  }
+
 
   &__title {
     z-index: 1;
@@ -35,30 +35,32 @@
 
   &__item-first-wrap {
     display: flex;
-    margin-bottom: 55px;
-    gap: 180px;
     justify-content: start;
 
+    margin-bottom: 55px;
+
+    gap: 180px;
     @include ul {
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+
       gap: 60px;
     }
   }
 
-  &__item {
-  }
+
 
   &__item-second-wrap {
     display: flex;
-    gap: 180px;
     justify-content: end;
 
+    gap: 180px;
     @include ul {
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+
       gap: 60px;
     }
   }

@@ -9,17 +9,21 @@
   }
 
   &__title {
-    font-weight: $font-weight-700;
-    font-size: $font-size-36;
-    line-height: 48px;
     color: $color-white;
+
+    font-size: $font-size-36;
+    font-weight: $font-weight-700;
+    line-height: 48px;
+
     @include lg {
       display: flex;
-      margin-right: auto;
-      margin-left: auto;
-      width: 100%;
       justify-content: center;
-      margin-bottom: 0px;
+
+      width: 100%;
+      margin-right: auto;
+      margin-bottom: 0;
+      margin-left: auto;
+
       font-weight: 500;
     }
   }
@@ -27,15 +31,17 @@
   &__img {
     position: relative; //TODO пересмотреть классы переисполуземых блоков
     z-index: 1;
+
     margin-right: 35px;
     padding-left: 30px;
 
     @include lg {
       display: flex;
+
       margin-right: auto;
+      margin-bottom: 20px;
       margin-left: auto;
       padding-left: 0;
-      margin-bottom: 20px;
     }
   }
 }

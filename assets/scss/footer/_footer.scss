@@ -2,23 +2,34 @@
 @use "../mixins" as *;
 
 .footer {
-  background: $color-black;
   position: relative;
 
+  background: $color-black;
+
   &::after {
-    content: "";
     position: absolute;
-    background: #e6e8ec;
-    height: 1px;
+    top: 310px;
+    @include lg {
+      top: 180px;
+    }
+
     width: 100%;
-    top: 180px;
+    height: 1px;
+
+    content: "";
+
+    background: #e6e8ec;
   }
   &__copyright {
+    padding: 40px;
+
+    text-align: center;
+
+    color: $color-white;
+
     font-size: $font-size-12;
     line-height: 20px;
-    color: $color-white;
-    text-align: center;
-    padding: 40px;
+
     @include lg {
       padding: 40px 20px 40px 20px;
     }
@@ -26,51 +37,55 @@
 
   &__box {
     display: flex;
-    justify-content: center;
-    gap: 154px;
     align-items: center;
+    justify-content: center;
 
+    gap: 154px;
     @include lg {
       gap: 70px;
     }
   }
 
   &__title {
-    font-weight: 600;
-    font-size: $font-size-48;
-    line-height: 53px;
+    position: relative;
+
     display: flex;
     align-items: center;
-    letter-spacing: 0.035em;
-    color: #f4f5f6;
+
     max-width: 136px;
     padding: 105px 0;
-    position: relative;
+
+    letter-spacing: 0.035em;
+
+    color: #f4f5f6;
+
+    font-size: $font-size-48;
+    font-weight: 600;
+    line-height: 53px;
 
     @include lg {
       font-size: $font-size-36;
       line-height: 40px;
     }
+
+    @include lg {
+      padding: 50px 0;
+    }
     &::after {
       position: absolute;
-      content: "";
+      right: -90px;
+
       width: 2px;
       height: 40px;
 
-      background: #353945;
+      content: "";
+
       border-radius: 2px;
-      right: -90px;
+      background: #353945;
 
       @include lg {
         right: -27px;
       }
     }
-
-    @include lg {
-      padding: 50px 0;
-    }
-  }
-
-  &__social {
   }
 }

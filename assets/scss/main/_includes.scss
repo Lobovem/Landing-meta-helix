@@ -4,36 +4,41 @@
 .includes {
   &__box {
     position: relative;
-    padding-bottom: 260px;
+
     margin-top: -315px;
+    padding-bottom: 260px;
 
     @include md {
       padding-bottom: 170px;
     }
 
     &::after {
-      content: "";
+      position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
-      position: absolute;
-      background: linear-gradient(
-        180deg,
-        #cacaca 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      mix-blend-mode: multiply;
-      box-shadow: 0px 28px 23px 11px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+
+      content: "";
+
       border-radius: 20px;
+      background: linear-gradient(
+      180deg,
+      #cacaca 0%,
+      rgba(255, 255, 255, 0) 100%
+      );
+      box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
+
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+      mix-blend-mode: multiply;
     }
   }
   &__header {
-    padding: 30px 40px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 40px;
 
     @include md {
       flex-direction: column;
@@ -41,22 +46,25 @@
   }
 
   &__decor-title-box {
-    display: flex;
-    gap: 35px;
-    z-index: 1;
     position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    gap: 35px;
+    @include md {
+      align-items: center;
+      flex-direction: column;
+
+      margin-bottom: 70px;
+
+      text-align: center;
+
+      gap: 20px;
+    }
 
     span {
       font-weight: 700;
-    }
-
-    @include md {
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-      margin-bottom: 70px;
-
-      align-items: center;
     }
   }
   &__button {
@@ -69,6 +77,7 @@
 
   &__decor {
     max-width: 26px;
+
     @include sm {
       margin-right: auto;
       margin-left: auto;
@@ -76,16 +85,17 @@
   }
 
   &__title {
-    font-size: $font-size-32;
-    line-height: 38px;
     letter-spacing: -0.01em;
+
     color: $color-accent;
+
+    font-size: $font-size-32;
     font-weight: 400;
+    line-height: 38px;
 
     @include xx-min {
       max-width: 300px;
     }
-
     @include md {
       font-size: 30px;
     }
@@ -94,27 +104,28 @@
   &__footer {
     position: relative;
     z-index: 1;
+
     display: flex;
-    background: $color-white;
-    mix-blend-mode: normal;
-    border-radius: 0px 0px 20px 20px;
-    gap: 72px;
+
     padding: 50px 100px;
 
+    border-radius: 0 0 20px 20px;
+    background: $color-white;
+
+    gap: 72px;
     @include xl {
       padding: 56px 40px;
     }
-
     @include xl {
       gap: 40px;
     }
     @include md {
       flex-direction: column;
     }
-
     @include xs {
       padding: 20px;
     }
+    mix-blend-mode: normal;
   }
 
   &__footer-decor {
@@ -125,13 +136,15 @@
   }
 
   &__footer-desc {
-    font-weight: $font-weight-500;
-    line-height: 30px;
+    flex: 1;
+
     text-align: justify;
     letter-spacing: -0.01em;
 
     color: $color-main;
-    flex: 1;
+
+    font-weight: $font-weight-500;
+    line-height: 30px;
 
     @include xs {
       font-size: $font-size-14;

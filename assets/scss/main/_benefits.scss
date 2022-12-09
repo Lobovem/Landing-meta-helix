@@ -3,21 +3,23 @@
 
 .benefits {
   &__decor-right {
-    margin-left: auto;
-    display: block;
     position: relative;
-    right: -170px;
-    top: -90px;
-
     z-index: 1;
+    top: -90px;
+    right: -170px;
+
+    display: block;
+
+    margin-left: auto;
 
     @include xl {
       max-width: 550px;
     }
     @include md {
-      max-width: 400px;
       top: -75px;
       right: -100px;
+
+      max-width: 400px;
       margin-bottom: 45px;
     }
   }
@@ -32,6 +34,7 @@
   //   position: absolute;
   &__decor-title-box {
     position: relative;
+
     margin-bottom: 60px;
 
     @include md {
@@ -50,22 +53,22 @@
     // }
   }
 
-  &__decor {
-  }
 
-  &__title {
-  }
+
+
 
   &__item-box {
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
     align-items: flex-start;
+    flex-wrap: wrap;
 
+    margin-bottom: 100px;
+
+    gap: 30px;
     @include md {
-      border-top: 1px solid $color-white;
       padding-top: 40px;
+
+      border-top: 1px solid $color-white;
     }
   }
 

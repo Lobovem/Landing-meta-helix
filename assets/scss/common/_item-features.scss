@@ -5,43 +5,47 @@
   position: relative;
   //TODO Сделал features вопросы по border и Item были одной высоты. Тень вылазит
   &::before {
-    content: "";
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
     position: absolute;
-    background: linear-gradient(
-      180deg,
-      #cacaca 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    mix-blend-mode: multiply;
-    box-shadow: 0px 28px 23px 11px rgba(0, 0, 0, 0.15);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+
     border-radius: 20px;
+    background: linear-gradient(
+    180deg,
+    #cacaca 0%,
+    rgba(255, 255, 255, 0) 100%
+    );
+    box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    mix-blend-mode: multiply;
   }
   &__title-box {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    justify-content: space-between;
 
+    gap: 50px;
     @include md-min {
       padding: 20px 30px;
     }
-
     @include md {
       padding: 20px;
     }
   }
 
   &__title {
-    font-weight: $font-weight-500;
-    font-size: $font-size-24;
-    line-height: 30px;
-    color: $color-white;
     z-index: 1;
+
+    color: $color-white;
+
+    font-size: $font-size-24;
+    font-weight: $font-weight-500;
+    line-height: 30px;
 
     @include md {
       font-size: $font-size-20;
@@ -54,23 +58,26 @@
   }
 
   &__desc {
+    position: relative;
+    z-index: 2;
+
+    min-height: 140px;
     padding: 30px;
+
+    text-align: justify;
+    letter-spacing: -0.01em;
+
+    color: $color-main;
+    border-radius: 0 0 20px 20px;
+    background: #ffffff;
+
     font-weight: 400;
     line-height: 30px;
-    letter-spacing: -0.01em;
-    color: $color-main;
-    background: #ffffff;
-    mix-blend-mode: normal;
-    border-radius: 0px 0px 20px 20px;
-    min-height: 140px;
-    position: relative;
-    text-align: justify;
-
-    z-index: 2;
 
     @include md {
       min-height: 125px;
       padding: 20px;
     }
+    mix-blend-mode: normal;
   }
 }

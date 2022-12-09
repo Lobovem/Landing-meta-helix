@@ -18,54 +18,59 @@ html {
 }
 
 .body {
-  overflow-x: hidden;
-
   position: relative;
+
+  overflow-x: hidden;
 
   &::after {
     position: fixed;
-    content: "";
-    left: 0;
+    z-index: -1;
+    top: 0;
     right: 0;
     bottom: 0;
-    top: 0;
+    left: 0;
+
+    content: "";
+
     background: linear-gradient(
-      185.23deg,
-      #52146f -15%,
-      #10127b 32.04%,
-      #52146f 66.06%,
-      #19198d 88.16%
+    185.23deg,
+    #52146f -15%,
+    #10127b 32.04%,
+    #52146f 66.06%,
+    #19198d 88.16%
     );
     background-repeat: no-repeat;
-    z-index: -1;
   }
 }
 
 .page {
   position: relative;
   &::after {
-    @media (min-width: 1900px) {
-      background-size: cover;
-      background-position: 50% 25%;
-    }
-
     @include lg-min {
       position: absolute;
-      content: "";
-      left: 0;
+      z-index: 0;
+      top: 0;
       right: 0;
       bottom: 0;
-      top: 0;
+      left: 0;
+
+      content: "";
+
       background-image: url(../img/background-main-decor.png);
-      background-position: 50% 120%;
       background-repeat: no-repeat;
+      background-position: 50% 120%;
+
       mix-blend-mode: multiply;
-      z-index: 0;
+    }
+    @media (min-width: 1900px) {
+      background-position: 50% 25%;
+      background-size: cover;
     }
   }
 }
 
 a {
   text-decoration: none;
+
   color: $color-black;
 }

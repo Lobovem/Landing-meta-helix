@@ -6,20 +6,24 @@
 
   &::after {
     position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
     top: 0;
+    right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-    mix-blend-mode: soft-light;
+    left: 0;
+
+    content: "";
+
     opacity: 0.25;
-    box-shadow: 0px 4px 23px 11px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    box-shadow: 0 4px 23px 11px rgba(0, 0, 0, 0.5);
+
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    mix-blend-mode: soft-light;
   }
 
   &__decor-title-box {
     position: relative;
+
     margin-bottom: 70px;
 
     @include md {
@@ -28,37 +32,41 @@
   }
 
   &__slider {
-    margin-left: auto;
     margin-right: 10px;
+    margin-left: auto;
   }
 
   &__decor-title-box {
-    display: flex;
-    gap: 35px;
-    z-index: 1;
     position: relative;
+    z-index: 1;
 
+    display: flex;
+
+    gap: 35px;
     @include md-min {
-      padding-left: 30px;
       padding-top: 135px;
+      padding-left: 30px;
+    }
+    @include md {
+      align-items: center;
+      flex-direction: column;
+
+      margin-bottom: 50px;
+      padding-top: 60px;
+
+      text-align: center;
+
+      gap: 20px;
     }
 
     span {
       font-weight: 700;
     }
-
-    @include md {
-      flex-direction: column;
-      gap: 20px;
-      text-align: center;
-      margin-bottom: 50px;
-      padding-top: 60px;
-      align-items: center;
-    }
   }
 
   &__decor {
     max-width: 26px;
+
     @include sm {
       margin-right: auto;
       margin-left: auto;
@@ -66,31 +74,34 @@
   }
 
   &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 48px;
     letter-spacing: -0.01em;
+
     color: $color-accent;
+
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
 
     @include xx-min {
       max-width: 300px;
     }
-
     @include md {
       font-size: 30px;
     }
   }
 
   &__item-box {
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
     align-items: flex-start;
+    flex-wrap: wrap;
 
+    margin-bottom: 100px;
+
+    gap: 30px;
     @include md {
-      border-top: 1px solid $color-white;
-      padding-top: 40px;
       margin-bottom: 30px;
+      padding-top: 40px;
+
+      border-top: 1px solid $color-white;
     }
   }
 
@@ -100,23 +111,25 @@
   }
 
   &__item-box-second {
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-bottom: 100px;
+
+    gap: 30px;
     @include md-min {
       display: none;
     }
     @include md {
       display: flex;
     }
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
-    align-items: flex-start;
   }
 
   &__decor-main {
     position: relative;
-    right: -55%;
-    top: -280px;
     z-index: 1;
+    top: -280px;
+    right: -55%;
 
     @include xx {
       right: -45%;

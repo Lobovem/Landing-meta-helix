@@ -2,10 +2,10 @@
 @use "../mixins" as *;
 
 .header {
-  padding-top: 54px;
   position: relative;
-  // overflow-x: hidden;
 
+  padding-top: 54px;
+  // overflow-x: hidden;
   // &::after {
   //   //TODO пресмотреть позиции декора
   //   content: "";
@@ -29,23 +29,19 @@
     top: 715px;
     // left: -190px;
     left: -12%;
-    mix-blend-mode: multiply;
 
     @include ul {
       left: -20%;
     }
-
     @include xl {
       left: -25%;
     }
-
     @include lg {
       display: none;
     }
+    mix-blend-mode: multiply;
   }
   &__decor-right {
-    display: none;
-
     position: absolute;
     // overflow-x: hidden;
     // top: 43%;
@@ -53,10 +49,12 @@
     // right: -165px;
     right: -145px;
 
-    mix-blend-mode: multiply;
+    display: none;
+
     @include lg {
       display: none;
     }
+    mix-blend-mode: multiply;
   }
 
   &__actions {
@@ -65,7 +63,6 @@
     @include lg {
       margin-bottom: 150px;
     }
-
     @include sm {
       margin-bottom: 100px;
     }
@@ -73,58 +70,62 @@
 
   &__title {
     text-align: center;
-    font-size: 150px;
     text-align: center;
     letter-spacing: -0.01em;
     text-transform: uppercase;
+
     color: $color-accent;
+
+    font-size: 150px;
 
     @include lg {
       font-size: 100px;
     }
-
     @include md {
       font-size: 80px;
       line-height: 28px;
     }
-
     @include sm {
       font-size: 50px;
-      line-height: 0px;
+      line-height: 0;
     }
   }
 
   &__title-desc {
-    font-size: $font-size-48;
-    line-height: 48px;
+    margin-bottom: 50px;
+
     text-align: center;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    color: $color-accent;
-    margin-bottom: 50px;
-    font-weight: 400;
 
-    span {
-      font-weight: $font-weight-700;
-    }
+    color: $color-accent;
+
+    font-size: $font-size-48;
+    font-weight: 400;
+    line-height: 48px;
 
     @include md {
       font-size: $font-size-32;
     }
-
     @include sm {
+      margin-bottom: 30px;
+
       font-size: $font-size-24;
       line-height: 48px;
-      margin-bottom: 30px;
+    }
+
+    span {
+      font-weight: $font-weight-700;
     }
   }
 
   &__decor-sm {
     display: flex;
     justify-content: center;
+
     margin-right: auto;
-    margin-left: auto;
     margin-bottom: 50px;
+    margin-left: auto;
 
     @include sm {
       margin-bottom: 40px;
@@ -132,24 +133,18 @@
   }
 
   &__button {
-    margin-right: auto;
-    margin-left: auto;
     display: flex;
+
+    margin-right: auto;
     margin-bottom: 440px;
+    margin-left: auto;
 
     @include lg {
       margin-bottom: 350px;
     }
-
     @include md {
       margin-bottom: 184px;
     }
   }
+}
 
-  &__info {
-  }
-}
-.layout {
-  &__main {
-  }
-}
