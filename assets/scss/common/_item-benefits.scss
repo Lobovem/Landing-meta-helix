@@ -2,7 +2,7 @@
 @use "../mixins" as *;
 
 .item-benefits {
-  position: relative; //TODO Сделал benefits но хвоты по border и Item были одной высоты
+  position: relative;
   &::before {
     position: absolute;
     top: 0;
@@ -21,10 +21,9 @@
     box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-    mix-blend-mode: multiply; /* Backshadow
-for containers
-*/
+    mix-blend-mode: multiply;
   }
+
   &__title-box {
     display: flex;
     align-items: center;

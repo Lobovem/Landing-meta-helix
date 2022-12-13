@@ -24,15 +24,15 @@
   }
 
   &__decor-title-box {
-    margin-bottom: 60px;
     position: relative;
     z-index: 1;
+
+    margin-bottom: 60px;
 
     @include ul {
       display: flex;
       justify-content: center;
     }
-
     @include ul-min {
       padding-left: 40px;
     }
@@ -58,9 +58,9 @@
     display: flex;
     justify-content: end;
 
-    gap: 180px;
     margin-bottom: 300px;
 
+    gap: 180px;
     @include xl {
       margin-bottom: 185px;
     }

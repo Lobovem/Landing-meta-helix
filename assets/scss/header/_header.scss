@@ -5,15 +5,24 @@
   position: relative;
 
   padding-top: 54px;
-  &::after {
-    content: "";
-    position: absolute;
-    background: url(../img/decor-right.png);
-    background-repeat: no-repeat;
-    top: 767px;
 
+  @include sm {
+    padding-top: 20px;
+  }
+  &::after {
+    position: absolute;
+    top: 767px;
     right: 0;
     bottom: -30%;
+
+    content: "";
+
+    background: url(../img/decor-right.png);
+    background-repeat: no-repeat;
+
+    @include lg {
+      display: none;
+    }
     mix-blend-mode: multiply;
 
     @media (min-width: 1540.8px) {
@@ -23,29 +32,24 @@
     @media (max-width: 1540.8px) {
       left: 57%;
     }
-
-    @include lg {
-      display: none;
-    }
   }
 
   &::before {
-    content: "";
     position: absolute;
-    background: url(../img/decor-left.png);
-    background-repeat: no-repeat;
     top: 715px;
-    left: -200px;
     right: 0;
     bottom: 0;
-    mix-blend-mode: multiply;
+    left: -200px;
+
+    content: "";
+
+    background: url(../img/decor-left.png);
+    background-repeat: no-repeat;
+
     @include lg {
       display: none;
     }
-  }
-
-  @include sm {
-    padding-top: 20px;
+    mix-blend-mode: multiply;
   }
 
   &__actions {
@@ -61,6 +65,7 @@
 
   &__title {
     position: relative;
+
     text-align: center;
     letter-spacing: -0.01em;
     text-transform: uppercase;

@@ -9,7 +9,6 @@
 
     gap: 20px;
     @include unlist;
-
     @include lg {
       position: absolute;
       top: 20px;
@@ -37,21 +36,24 @@
   }
 
   &__link {
-    align-items: center;
-
-    color: $color-main;
-    font-weight: $font-weight-500;
-
-    line-height: 21px;
-    padding: 20px;
-    text-align: center;
-    height: 80px;
     display: flex;
     align-items: center;
+    align-items: center;
+
+    height: 80px;
+    padding: 20px;
+
+    text-align: center;
+
+    color: $color-main;
+
+    font-weight: $font-weight-500;
+    line-height: 21px;
 
     &.active {
-      font-weight: $font-weight-700;
       border-bottom: 4px solid $color-main;
+
+      font-weight: $font-weight-700;
     }
   }
 

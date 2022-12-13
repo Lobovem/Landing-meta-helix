@@ -15,9 +15,9 @@
 
     border-radius: 20px;
     background: linear-gradient(
-      180deg,
-      #cacaca 0%,
-      rgba(255, 255, 255, 0) 100%
+    180deg,
+    #cacaca 0%,
+    rgba(255, 255, 255, 0) 100%
     );
     box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
@@ -58,8 +58,11 @@
       position: absolute;
       top: -203px;
       right: 0;
+      right: -50%;
       bottom: 0;
-      left: 35%; //TODO отцентровать
+      left: 50%;
+      // left: 35%;
+      //TODO отцентровать
 
       content: "";
 
@@ -139,7 +142,7 @@
       line-height: 30px;
     }
     span {
-      font-weight: 700; //TODO пресмотреть толщину шрифтов
+      font-weight: 700;
     }
   }
 }

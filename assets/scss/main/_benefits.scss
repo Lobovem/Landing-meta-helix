@@ -23,19 +23,12 @@
       margin-bottom: 45px;
     }
   }
-  // position: relative; //TODO Сделал benefits но хвоты по border
-  // &::before {
-  //   content: "";
-  //   left: 0;
-  //   right: 0;
-  //   top: 0;
-  //   bottom: 0;
-  //   background-image: url(../img/decor-spiral-right-lg.png);
-  //   position: absolute;
+
   &__decor-title-box {
     position: relative;
-    margin-bottom: 60px;
     z-index: 1;
+
+    margin-bottom: 60px;
 
     @include md-min {
       padding-left: 40px;
@@ -43,23 +36,13 @@
     @include md {
       margin-bottom: 30px;
     }
-
-    // &::after {
-    //   position: absolute;
-    //   content: "";
-    //   border-top: 1px solid white;
-    //   width: 70%;
-    //   left: 438px;
-    //   right: 0;
-    //   top: 27px;
-    //   bottom: 0;
-    // }
   }
 
   &__decor-border {
     @include md-min {
       width: 74%;
       height: 1px;
+
       background: $color-white;
     }
   }

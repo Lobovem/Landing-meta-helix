@@ -3,21 +3,21 @@
 
 .decor-title-box {
   display: flex;
-  gap: 35px;
 
+  gap: 35px;
   @include md-min {
     align-items: center;
+  }
+  @include md {
+    flex-direction: column;
+
+    gap: 20px;
   }
 
   &--alt {
     @include xl {
       gap: 20px;
     }
-  }
-
-  @include md {
-    flex-direction: column;
-    gap: 20px;
   }
 
   &__title {
@@ -30,6 +30,17 @@
     font-weight: $font-weight-700;
     line-height: 48px;
 
+    @include lg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      margin-bottom: 0;
+    }
+    @include md {
+      text-align: center;
+    }
+
     &--alt {
       @include md-min {
         min-width: 280px;
@@ -39,20 +50,11 @@
     span {
       font-weight: 400;
     }
-    @include lg {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      margin-bottom: 0;
-    }
-
-    @include md {
-      text-align: center;
-    }
   }
 
   &__img {
     max-width: 26px;
+
     @include md {
       margin-right: auto;
       margin-left: auto;

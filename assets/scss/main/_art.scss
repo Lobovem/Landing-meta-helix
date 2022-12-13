@@ -20,8 +20,8 @@
   &__decor-box {
     position: absolute;
     z-index: 1;
-    right: 0;
     top: -200px;
+    right: 0;
 
     @include xl {
       top: -114px;
@@ -36,28 +36,29 @@
   &__decor-border {
     width: calc(100% - 360px);
     height: 1px;
+
     background: $color-white;
 
     @include xl {
       width: calc(100% - 280px);
     }
-
     @include md {
       order: -1;
+
       width: calc(100% - 115px);
       margin-bottom: 76px;
     }
   }
 
   &__decor-title-box {
-    margin-bottom: 65px;
     position: relative;
     z-index: 1;
+
+    margin-bottom: 65px;
 
     @include md-min {
       padding-left: 40px;
     }
-
     @include lg {
       margin-bottom: 30px;
     }
@@ -117,9 +118,9 @@
 
       border-radius: 20px;
       background: linear-gradient(
-        180deg,
-        #cacaca 0%,
-        rgba(255, 255, 255, 0) 100%
+      180deg,
+      #cacaca 0%,
+      rgba(255, 255, 255, 0) 100%
       );
       box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 

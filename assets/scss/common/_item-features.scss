@@ -3,7 +3,6 @@
 
 .item-features {
   position: relative;
-  //TODO Сделал features вопросы по border и Item были одной высоты. Тень вылазит
   &::before {
     position: absolute;
     top: 0;
@@ -24,6 +23,7 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
     mix-blend-mode: multiply;
   }
+
   &__title-box {
     display: flex;
     align-items: center;
