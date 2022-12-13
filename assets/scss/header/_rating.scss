@@ -4,12 +4,6 @@
 .rating {
   position: relative;
 
-  margin-bottom: 160px;
-
-  @include md {
-    margin-bottom: 100px;
-  }
-
   &::after {
     position: absolute;
     top: 0;

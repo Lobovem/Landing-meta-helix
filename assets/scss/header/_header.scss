@@ -137,4 +137,12 @@
       margin-bottom: 184px;
     }
   }
+
+  &__info-rating {
+    margin-bottom: 160px;
+
+    @include md {
+      margin-bottom: 100px;
+    }
+  }
 }
