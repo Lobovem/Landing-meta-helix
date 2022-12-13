@@ -45,8 +45,9 @@
     gap: 35px;
     @include md-min {
       padding-top: 135px;
-      padding-left: 30px;
-    }
+      padding-left: 40px;
+    }
+
     @include md {
       align-items: center;
       flex-direction: column;
