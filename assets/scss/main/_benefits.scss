@@ -56,6 +56,14 @@
     // }
   }
 
+  &__decor-border {
+    @include md-min {
+      width: 74%;
+      height: 1px;
+      background: $color-white;
+    }
+  }
+
   &__item-box {
     display: flex;
     align-items: flex-start;

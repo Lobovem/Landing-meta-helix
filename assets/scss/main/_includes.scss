@@ -39,6 +39,7 @@
     justify-content: space-between;
 
     padding: 30px 40px;
+    gap: 35px;
 
     @include md {
       flex-direction: column;

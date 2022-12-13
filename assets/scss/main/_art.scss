@@ -37,7 +37,6 @@
     width: calc(100% - 360px);
     height: 1px;
     background: $color-white;
-    line-height: 10px;
 
     @include xl {
       width: calc(100% - 280px);

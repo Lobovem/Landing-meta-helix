@@ -30,6 +30,12 @@
     font-weight: $font-weight-700;
     line-height: 48px;
 
+    &--alt {
+      @include md-min {
+        min-width: 280px;
+      }
+    }
+
     span {
       font-weight: 400;
     }
