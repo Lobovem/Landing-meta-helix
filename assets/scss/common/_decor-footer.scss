@@ -1,7 +1,7 @@
 @use "../presets" as *;
 @use "../mixins" as *;
 
-.section-footer {
+.decor-footer {
   position: relative;
   &::after {
     position: absolute;

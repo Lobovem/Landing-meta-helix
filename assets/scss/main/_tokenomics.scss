@@ -22,9 +22,9 @@
 
       border-radius: 20px;
       background: linear-gradient(
-      180deg,
-      #cacaca 0%,
-      rgba(255, 255, 255, 0) 100%
+        180deg,
+        #cacaca 0%,
+        rgba(255, 255, 255, 0) 100%
       );
       box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
@@ -53,7 +53,6 @@
     z-index: 1;
 
     margin-bottom: 30px;
-    margin-left: -30px;
 
     @include lg {
       flex-direction: column;
@@ -65,8 +64,6 @@
   &__decor {
     padding-left: 0;
   }
-
-
 
   &__info-box {
     padding-top: 20px;
@@ -200,7 +197,6 @@
 
   @include md {
   }
-
 
   &__title {
     color: #ffffff;

@@ -25,12 +25,17 @@
 
   &__decor-title-box {
     margin-bottom: 60px;
-  }
-
-
-
-  &__title {
+    position: relative;
     z-index: 1;
+
+    @include ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include ul-min {
+      padding-left: 40px;
+    }
   }
 
   &__item-first-wrap {
@@ -48,8 +53,6 @@
       gap: 60px;
     }
   }
-
-
 
   &__item-second-wrap {
     display: flex;
