@@ -18,40 +18,35 @@
   }
 
   &__decor-box {
-    position: relative;
+    position: absolute;
     z-index: 1;
-    top: 255px;
-
-    margin-top: -150px;
+    right: 0;
+    top: -200px;
 
     @include xl {
-      top: 170px;
+      top: -114px;
     }
     @include md {
-      top: 50px;
+      top: -140px;
 
       margin-top: 0;
     }
-    &:after {
-      position: relative; //TODO пересмотреть линию
-      bottom: 140px;
-      left: 200px;
+  }
 
-      display: block;
+  &__decor-border {
+    width: calc(100% - 360px);
+    height: 1px;
+    background: $color-white;
+    line-height: 10px;
 
-      width: 70%;
-      height: 1px;
+    @include xl {
+      width: calc(100% - 280px);
+    }
 
-      content: "";
-
-      background-color: $color-white;
-
-      @include xl-min {
-        bottom: 227px;
-      }
-      @include md {
-        display: none;
-      }
+    @include md {
+      order: -1;
+      width: calc(100% - 115px);
+      margin-bottom: 76px;
     }
   }
 

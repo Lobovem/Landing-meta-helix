@@ -33,39 +33,13 @@ html {
     content: "";
 
     background: linear-gradient(
-    185.23deg,
-    #52146f -15%,
-    #10127b 32.04%,
-    #52146f 66.06%,
-    #19198d 88.16%
+      185.23deg,
+      #52146f -15%,
+      #10127b 32.04%,
+      #52146f 66.06%,
+      #19198d 88.16%
     );
     background-repeat: no-repeat;
-  }
-}
-
-.page {
-  position: relative;
-  &::after {
-    @include lg-min {
-      position: absolute;
-      z-index: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
-      content: "";
-
-      background-image: url(../img/background-main-decor.png);
-      background-repeat: no-repeat;
-      background-position: 50% 120%;
-
-      mix-blend-mode: multiply;
-    }
-    @media (min-width: 1900px) {
-      background-position: 50% 25%;
-      background-size: cover;
-    }
   }
 }
 
