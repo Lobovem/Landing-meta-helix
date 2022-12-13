@@ -14,7 +14,7 @@
 
   @include md {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   &__title {
@@ -34,12 +34,7 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-
-      // margin-right: auto;
       margin-bottom: 0;
-      // margin-left: auto;
-
-      // font-weight: 500;
     }
 
     @include md {

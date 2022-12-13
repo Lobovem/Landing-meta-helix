@@ -42,29 +42,15 @@
 
     @include md {
       flex-direction: column;
+      padding-top: 50px;
     }
   }
 
   &__decor-title-box {
     position: relative;
     z-index: 1;
-
-    // display: flex;
-
-    // gap: 35px;
     @include md {
-      // align-items: center;
-      // flex-direction: column;
-
       margin-bottom: 70px;
-
-      // text-align: center;
-
-      // gap: 20px;
-    }
-
-    span {
-      font-weight: 700;
     }
   }
   &__button {
@@ -72,32 +58,6 @@
 
     @include md {
       margin-bottom: 30px;
-    }
-  }
-
-  &__decor {
-    max-width: 26px;
-
-    @include sm {
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
-
-  &__title {
-    letter-spacing: -0.01em;
-
-    color: $color-accent;
-
-    font-size: $font-size-32;
-    font-weight: 400;
-    line-height: 38px;
-
-    @include xx-min {
-      max-width: 300px;
-    }
-    @include md {
-      font-size: 30px;
     }
   }
 
