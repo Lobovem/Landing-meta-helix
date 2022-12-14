@@ -100,6 +100,10 @@
     justify-content: center;
   }
 
+  &__slider-second {
+    display: none;
+  }
+
   &__slider-wrap {
     display: flex;
 
