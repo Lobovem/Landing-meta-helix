@@ -1,5 +1,4 @@
 // управление меню
-// управление меню
 const menuBtn = document.querySelector('.navbar__burger');
 const menuList = document.querySelector('.navbar__list');
 const header = document.querySelector('header');
@@ -18,7 +17,8 @@ menuBtn.addEventListener('click', (e) => {
   }
 });
 
-// Горизонтальный слайдер. Считали DOM элементы
+
+// считали DOM элементы
 const headersList = document.querySelectorAll('.slider');
 const indicatorsList = document.querySelectorAll('.slider__indicator');
 
@@ -38,7 +38,23 @@ setInterval(() => {
   indicatorsList[index].classList.toggle('active');
 }, interval);
 
-// вычисление и изменение высоты блока описания под максимальный текст
-descriptionsList.forEach(el => heightsArr.push(el.clientHeight));
-heightMax = Math.max(...heightsArr);
-descriptionsList.forEach(el => el.style.height = `${heightMax}px`);
+
+// Горизонтальный слайдер. Считали DOM элементы
+const headersLis = document.querySelectorAll('.slider-alt');
+const indicatorsLis = document.querySelectorAll('.slider-alt__indicator-alt');
+
+let ind = 0;
+let interv = 5000;
+let heightsAr = [];
+let heightM = null;
+
+setInterval(() => {
+  // снимаем классы active для первых элементов
+  headersLis[ind].classList.toggle('active');
+  indicatorsLis[ind].classList.toggle('active');
+  // увеличиваем индекс, пока не превышено количество элементов
+  ind = (ind + 1) % headersLis.length;
+  // ставим классы active следующим элементам
+  headersLis[ind].classList.toggle('active');
+  indicatorsLis[ind].classList.toggle('active');
+}, interval);
