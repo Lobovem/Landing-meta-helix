@@ -1,5 +1,5 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use '../presets' as *;
+@use '../mixins' as *;
 
 .rating {
   position: relative;
@@ -11,13 +11,13 @@
     bottom: 0;
     left: 0;
 
-    content: "";
+    content: '';
 
     border-radius: 20px;
     background: linear-gradient(
-    180deg,
-    #cacaca 0%,
-    rgba(255, 255, 255, 0) 100%
+      180deg,
+      #cacaca 0%,
+      rgba(255, 255, 255, 0) 100%
     );
     box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
@@ -53,32 +53,25 @@
 
       grid-template-columns: 1fr;
     }
+  }
+  &__decor-main {
+    position: absolute;
+    top: -203px;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
 
-    &::before {
-      position: absolute;
-      top: -203px;
-      right: 0;
-      right: -50%;
-      bottom: 0;
-      left: 50%;
-      // left: 35%;
-      //TODO отцентровать
+    content: '';
 
-      content: "";
+    @include xl {
+      top: -155px;
 
-      background: url(../img/decor-spiral.png);
-      background-repeat: no-repeat;
+      max-width: 270px;
+    }
 
-      @include xl {
-        top: -155px;
-
-        background-size: 270px;
-      }
-      @include lg {
-        top: -87px;
-
-        background-size: 150px;
-      }
+    @include md {
+      top: -87px;
+      max-width: 150px;
     }
   }
 
