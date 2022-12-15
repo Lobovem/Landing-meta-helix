@@ -1,0 +1,21 @@
+@use 'skins';
+@use 'variables';
+@use 'mixins';
+@use 'mixins-media';
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 80px;
+  padding: 0 75px;
+
+  border-radius: 70px;
+  background: skins.$color-white;
+  gap: variables.$gap;
+
+  @include mixins-media.md-min {
+    background: red;
+  }
+}
