@@ -61,10 +61,17 @@
 .swiper {
   width: 600px;
   min-height: 450px;
+  margin-left: 0;
+  margin-right: 0;
+
+  @include md {
+    width: 100%;
+  }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
   width: 40px;
-  top: 38%;
+  // top: 38%;
+  position: relative;
 }

@@ -40,13 +40,13 @@
     justify-content: space-between;
 
     gap: 40px;
-    @include lg {
+    @include xl {
       align-items: center;
       flex-direction: column;
     }
   }
   &__decor-border {
-    @include lg-min {
+    @include xl-min {
       width: 100%;
       height: 1px;
 
@@ -60,7 +60,7 @@
 
     margin-bottom: 30px;
 
-    @include lg {
+    @include xl {
       flex-direction: column;
 
       margin-left: 0;
@@ -75,16 +75,16 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
-    @include lg-min {
+    @include xl-min {
       margin-left: 10px;
       padding-left: 50px;
 
       border-left: 1px solid white;
     }
-    @include lg {
+    @include xl {
       margin-bottom: 30px;
       padding-top: 50px;
-
+      width: 100%;
       text-align: center;
 
       border-top: 1px solid $color-white;
@@ -103,17 +103,14 @@
   &__slider-wrap {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
 
-    @include lg {
+    @include xl {
       justify-content: center;
     }
   }
 
-  &__slider-button-wrap {
-    @include lg-min {
-    }
-  }
   &__slider-button {
     order: 1;
     opacity: 0.2;
@@ -122,9 +119,6 @@
       order: 0;
 
       transform: rotate(-180deg);
-
-      @include lg-min {
-      }
     }
     &.active {
       // opacity: 0.2;
@@ -157,7 +151,7 @@
     font-weight: 400;
     line-height: 27px;
 
-    @include lg {
+    @include xl {
       margin-bottom: 40px;
     }
 
