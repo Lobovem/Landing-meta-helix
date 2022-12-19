@@ -34,7 +34,6 @@
   }
   &__box {
     position: relative;
-    z-index: 1;
 
     display: flex;
     justify-content: space-between;
@@ -74,6 +73,7 @@
   &__info-box {
     padding-top: 20px;
     padding-bottom: 20px;
+    z-index: 1;
 
     @include xl-min {
       margin-left: 10px;
