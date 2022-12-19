@@ -1,5 +1,5 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use '../presets' as *;
+@use '../mixins' as *;
 
 .tokenomics {
   &__wrap {
@@ -18,7 +18,7 @@
       bottom: 0;
       left: 0;
 
-      content: "";
+      content: '';
 
       border-radius: 20px;
       background: linear-gradient(
@@ -100,13 +100,9 @@
     justify-content: center;
   }
 
-  &__slider-second {
-    display: none;
-  }
-
   &__slider-wrap {
     display: flex;
-
+    justify-content: center;
     margin-bottom: 30px;
 
     @include lg {
@@ -116,7 +112,6 @@
 
   &__slider-button-wrap {
     @include lg-min {
-      display: none; //TODO пересмотреть реализацию блока
     }
   }
   &__slider-button {

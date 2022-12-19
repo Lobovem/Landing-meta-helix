@@ -1,9 +1,7 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use '../presets' as *;
+@use '../mixins' as *;
 
 .slider {
-  display: none;
-
   user-select: none;
 
   &.active {
@@ -29,7 +27,6 @@
     background-position: 50% 50%;
 
     @include md {
-      display: none;
     }
 
     &.active {
@@ -43,19 +40,12 @@
 }
 
 .slider-alt {
-  display: none;
-
   user-select: none;
-
-  &.active {
-    display: block;
-  }
 
   &__indicator-alt {
     transition: 0.2s linear;
 
     @include md {
-      display: none;
     }
 
     &.active {
@@ -66,4 +56,15 @@
       transform: rotate(180deg);
     }
   }
+}
+
+.swiper {
+  width: 600px;
+  min-height: 450px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  top: 38%;
 }

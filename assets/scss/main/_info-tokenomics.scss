@@ -1,9 +1,7 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use '../presets' as *;
+@use '../mixins' as *;
 
 .info-tokenomics {
-  width: 100%;
-
   &__title {
     color: $color-white;
 
