@@ -49,9 +49,12 @@
     }
 
     &.active {
-      opacity: 0.25;
+      opacity: 1;
     }
 
+    &.active-alt {
+      opacity: 1;
+    }
     &--left {
       transform: rotate(180deg);
     }
@@ -72,6 +75,27 @@
 .swiper-button-next,
 .swiper-button-prev {
   width: 40px;
-  // top: 38%;
   position: relative;
+
+  @include sm {
+    display: inline-block;
+  }
+}
+
+.swiper-button-next {
+  @include sm {
+    position: fixed;
+    top: 0;
+    right: 50%;
+    transform: translateX(130%);
+  }
+}
+
+.swiper-button-prev {
+  @include sm {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-130%);
+  }
 }

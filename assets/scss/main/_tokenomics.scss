@@ -109,6 +109,11 @@
     @include xl {
       justify-content: center;
     }
+
+    @include sm {
+      display: block;
+      position: relative;
+    }
   }
 
   &__slider-button {
@@ -129,12 +134,13 @@
     padding: 0 40px;
 
     @include sm {
-      max-width: 85%;
-      padding: 0 20px;
+      max-width: 100%;
+      padding: 60px 20px 0 20px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
     }
     @include xs {
-      max-width: 80%;
-      padding: 0 10px;
     }
   }
 
