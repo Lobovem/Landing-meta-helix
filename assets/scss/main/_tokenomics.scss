@@ -120,18 +120,23 @@
     order: 1;
     opacity: 0.2;
 
-    &--alt {
-      order: 0;
-
-      transform: rotate(-180deg);
-    }
     &.active {
-      // opacity: 0.2;
+      opacity: 1;
+    }
+
+    &.active-alt {
+      opacity: 1;
+    }
+
+    &--alt {
+      transform: rotate(-180deg);
+      order: 0;
     }
   }
 
   &__slider-img {
     padding: 0 40px;
+    mix-blend-mode: multiply;
 
     @include sm {
       max-width: 100%;
@@ -164,5 +169,55 @@
     span {
       font-weight: $font-weight-700;
     }
+  }
+}
+
+.fff {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    z-index: 1;
+    color: #454459;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    width: 192px;
+
+    height: 192px;
+    border-radius: 96px;
+    background: #ffffff;
+    // mix-blend-mode: none;
+
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 350px;
+    height: 350px;
+    background-image: url(../img/slider-kryg.svg);
+    mix-blend-mode: multiply;
   }
 }

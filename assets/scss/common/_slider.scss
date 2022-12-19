@@ -79,13 +79,13 @@
 
   @include sm {
     display: inline-block;
+    position: fixed;
+    top: 0;
   }
 }
 
 .swiper-button-next {
   @include sm {
-    position: fixed;
-    top: 0;
     right: 50%;
     transform: translateX(130%);
   }
@@ -93,8 +93,6 @@
 
 .swiper-button-prev {
   @include sm {
-    position: fixed;
-    top: 0;
     left: 50%;
     transform: translateX(-130%);
   }
