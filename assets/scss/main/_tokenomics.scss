@@ -119,6 +119,16 @@
   &__slider-button {
     order: 1;
     opacity: 0.2;
+    width: 40px;
+    position: relative;
+
+    @include sm {
+      display: inline-block;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(30%);
+    }
 
     &.active {
       opacity: 1;
@@ -129,8 +139,18 @@
     }
 
     &--alt {
-      transform: rotate(-180deg);
       order: 0;
+      width: 40px;
+      position: relative;
+      transform: rotate(-180deg);
+
+      @include sm {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        right: 50%;
+        transform: translateX(-140%) rotate(-180deg);
+      }
     }
   }
 
@@ -144,8 +164,6 @@
       display: block;
       margin-right: auto;
       margin-left: auto;
-    }
-    @include xs {
     }
   }
 

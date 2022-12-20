@@ -1,8 +1,13 @@
-@use "../presets" as *;
-@use "../mixins" as *;
+@use '../presets' as *;
+@use '../mixins' as *;
 
 .features {
   position: relative;
+
+  &__slider {
+    position: relative;
+    z-index: 2;
+  }
 
   &::after {
     position: absolute;
@@ -11,7 +16,7 @@
     bottom: 0;
     left: 0;
 
-    content: "";
+    content: '';
 
     opacity: 0.25;
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
@@ -62,7 +67,6 @@
   &__item-box {
     align-items: flex-start;
     flex-wrap: wrap;
-
     margin-bottom: 100px;
 
     gap: 30px;
@@ -82,15 +86,50 @@
   &__item-box-second {
     align-items: flex-start;
     flex-wrap: wrap;
-
+    // padding: 0 20px;
     margin-bottom: 100px;
+    display: flex;
 
     gap: 30px;
     @include md-min {
-      display: none;
     }
     @include md {
-      display: flex;
+    }
+  }
+
+  &__buttom-prev {
+    order: 0;
+    width: 40px;
+    position: relative;
+    transform: rotate(-180deg);
+
+    @include sm {
+    }
+    @include md {
+      display: none;
+    }
+  }
+
+  &__buttom-next {
+    order: 1;
+    width: 40px;
+    position: relative;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__slider-button {
+    &.active {
+      opacity: 1;
+    }
+
+    &.active-alt {
+      opacity: 1;
+    }
+
+    &--alt {
     }
   }
 

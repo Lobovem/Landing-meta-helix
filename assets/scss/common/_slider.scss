@@ -74,26 +74,16 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 40px;
-  position: relative;
-
-  @include sm {
-    display: inline-block;
-    position: fixed;
-    top: 0;
-  }
 }
 
 .swiper-button-next {
-  @include sm {
-    right: 50%;
-    transform: translateX(130%);
-  }
 }
 
 .swiper-button-prev {
-  @include sm {
-    left: 50%;
-    transform: translateX(-130%);
-  }
 }
+
+// .swiper-pointer-events {
+//   display: flex;
+//   overflow: hidden;
+//   flex-direction: column;
+// }
