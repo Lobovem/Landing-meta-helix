@@ -28,10 +28,12 @@
           </div>
 
           <ul class="navbar__list">
-            <li class="navbar__item"><a class="navbar__link active" href="">About</a> </li>
-            <li class="navbar__item "><a class="navbar__link" href="">Holders Benefits</a> </li>
-            <li class="navbar__item "><a class="navbar__link" href="">Tokenomics</a> </li>
-            <li class="navbar__item"><a class="navbar__link" href="">HelixMap</a> </li>
+            <li class="navbar__item"><a data-goto=".page-section-1" class="navbar__link active" href="#">About</a>
+            </li>
+            <li class="navbar__item"><a data-goto=".page-section-2" class="navbar__link" href="#">Holders Benefits</a>
+            </li>
+            <li class="navbar__item"><a data-goto=".page-section-3" class="navbar__link" href="#">Tokenomics</a> </li>
+            <li class="navbar__item"><a data-goto=".page-section-4" class="navbar__link" href="#">HelixMap</a> </li>
           </ul>
         </nav>
 
@@ -50,7 +52,7 @@
       <img class="header__decor-sm" src="assets/img/decor-icon-sm.svg" alt="decor-icon-sm.svg">
       <button class="header__button button">Mint</button>
 
-      <section class="header__info-rating rating">
+      <section class="header__info-rating rating page-section-1">
         <div class="rating__header">
           <img class="rating__decor-main" src="assets/img/decor-spiral.png" alt="decor-spiral.png">
           <div class="rating__decor-title-box decor-title-box decor-title-box--alt">
@@ -85,7 +87,8 @@
 
         </div>
         <div class="rating__footer">
-          <p class="rating__footer-desc"><span>MetaHelix is a Discord-based technology platform built from the ground up
+          <p class="rating__footer-desc"><span>MetaHelix is a Discord-based technology platform built from the ground
+              up
               for
               NFT communities</span>, providing a
             suite of powerful utilities and tools for projects to empower their Web3 communities, with an effortless
@@ -211,9 +214,6 @@
 
               </div>
             </div>
-
-
-
           </div>
         </div>
 
@@ -252,7 +252,7 @@
     <section class="benefits">
       <img class="benefits__decor-right" src="assets/img/decor-spiral-right-lg.png" alt="decor-spiral-right-lg.png">
       <div class="layout__main">
-        <div class="benefits__decor-title-box decor-title-box">
+        <div class="benefits__decor-title-box decor-title-box page-section-2">
           <img class="decor-title-box__img" src="assets/img/decor-icon-sm.svg" alt="decor-icon-sm.svg">
           <h2 class="decor-title-box__title decor-title-box__title--alt">Holders benefits</h2>
           <div class="benefits__decor-border"></div>
@@ -293,7 +293,7 @@
       </div>
     </section>
 
-    <section class="tokenomics">
+    <section class="tokenomics page-section-3">
       <div class="layout__main">
 
         <div class="tokenomics__wrap">
@@ -361,12 +361,12 @@
       </div>
     </section>
 
-    <section class="map decor__footer">
-      <div class="map__decor-box">
+    <section class="map  decor__footer">
+      <div class="map__decor-box ">
         <img class="map__decor-left" src="assets/img/decor-spiral-left-sm.png" alt="decor-spiral-left-sm.png">
       </div>
       <div class="layout__main">
-        <div class="map__decor-title-box decor-title-box">
+        <div class="map__decor-title-box decor-title-box page-section-4">
           <img class="decor-title-box__img" src="assets/img/decor-icon-sm.svg" alt="decor-icon-sm.svg">
           <h2 class="decor-title-box__title">HelixMap</h2>
         </div>
@@ -515,7 +515,7 @@
 
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></sc > -->
-
+  <script src="assets/js/main.js"></script>
   <script src="assets/swiper-bundle.min.js"></script>
   <script src="assets/js/slider.js"></script>
 
