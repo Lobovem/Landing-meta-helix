@@ -30,19 +30,21 @@ html {
 
     content: '';
 
-    background: linear-gradient(
-      185.23deg,
-      #52146f -15%,
-      #10127b 32.04%,
-      #52146f 66.06%,
-      #19198d 88.16%
-    );
+    background: linear-gradient(185.23deg,
+        #52146f -15%,
+        #10127b 32.04%,
+        #52146f 66.06%,
+        #19198d 88.16%);
     background-repeat: no-repeat;
   }
 }
 
-.touch {
+.touch {}
+
+.lock {
+  overflow: hidden;
 }
+
 a {
   text-decoration: none;
 

@@ -33,6 +33,20 @@ if (isMobile.any()) {
   document.body.classList.add('pc');
 }
 
+
+//Меню бургер
+
+const burgerMenu = document.querySelector('.navbar__burger');
+if (burgerMenu) {
+  const navbarList = document.querySelector('.navbar__list');
+  burgerMenu.addEventListener("click", function (e) {
+    //Когда открылось меню, чтобы не было скролла страницы
+    document.body.classList.toggle('lock');
+    burgerMenu.classList.toggle('active');
+    navbarList.classList.toggle('active');
+  });
+}
+
 //Прокрутка при клике
 
 const menuLinks = document.querySelectorAll('.navbar__link[data-goto]');
@@ -49,6 +63,9 @@ if (menuLinks.length > 0) {
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
       const gotoBlockValue =
         gotoBlock.getBoundingClientRect().top;
+      //  Если нужно вычесть высоту блока, например position:fixed 
+      // + pageXOffset -
+      // document.querySelector('.test').offsetHeight;
 
       window.scrollTo({
         top: gotoBlockValue,
