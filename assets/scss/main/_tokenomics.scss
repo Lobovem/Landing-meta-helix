@@ -11,6 +11,7 @@
     @include lg {
       padding: 40px 20px 20px 20px;
     }
+
     &::after {
       position: absolute;
       top: 0;
@@ -21,17 +22,17 @@
       content: '';
 
       border-radius: 20px;
-      background: linear-gradient(
-        180deg,
-        #cacaca 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
+      background: linear-gradient(180deg,
+          #cacaca 0%,
+          rgba(255, 255, 255, 0) 100%);
       box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-      mix-blend-mode: multiply;
+      // mix-blend-mode: multiply;
+      opacity: 0.1;
     }
   }
+
   &__box {
     position: relative;
 
@@ -39,11 +40,13 @@
     justify-content: space-between;
 
     gap: 40px;
+
     @include xl {
       align-items: center;
       flex-direction: column;
     }
   }
+
   &__decor-border {
     @include xl-min {
       width: 100%;
@@ -81,6 +84,7 @@
 
       border-left: 1px solid white;
     }
+
     @include xl {
       margin-bottom: 30px;
       padding-top: 50px;
@@ -90,6 +94,7 @@
       border-top: 1px solid $color-white;
       border-bottom: 1px solid $color-white;
     }
+
     @include md {
       margin-bottom: 0;
       padding-top: 35px;

@@ -7,6 +7,7 @@
   &__slider {
     position: relative;
     z-index: 2;
+    overflow-x: hidden;
   }
 
   &::after {
@@ -35,6 +36,7 @@
     @include lg {
       padding-top: 40px;
     }
+
     @include md {
       margin-bottom: 30px;
     }
@@ -70,6 +72,7 @@
     margin-bottom: 100px;
 
     gap: 30px;
+
     @include md {
       margin-bottom: 30px;
       padding-top: 40px;
@@ -91,10 +94,10 @@
     display: flex;
 
     gap: 30px;
-    @include md-min {
-    }
-    @include md {
-    }
+
+    @include md-min {}
+
+    @include md {}
   }
 
   &__buttom-prev {
@@ -103,8 +106,8 @@
     position: relative;
     transform: rotate(-180deg);
 
-    @include sm {
-    }
+    @include sm {}
+
     @include md {
       display: none;
     }
@@ -129,8 +132,7 @@
       opacity: 1;
     }
 
-    &--alt {
-    }
+    &--alt {}
   }
 
   &__decor-main {

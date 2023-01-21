@@ -21,15 +21,14 @@
     content: "";
 
     border-radius: 20px;
-    background: linear-gradient(
-    180deg,
-    #cacaca 0%,
-    rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(180deg,
+        #cacaca 0%,
+        rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-    mix-blend-mode: multiply;
+    // mix-blend-mode: multiply;
+    opacity: 0.1;
   }
 
   &__connector {
@@ -52,6 +51,7 @@
       @include ul {
         display: none;
       }
+
       @media (min-width: 1540.8px) {
         right: 145px;
       }
@@ -86,6 +86,7 @@
     @include ul-min {
       display: none;
     }
+
     @include ul {
       display: block;
     }
