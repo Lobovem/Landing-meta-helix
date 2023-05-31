@@ -19,8 +19,14 @@
 
   font-weight: $font-weight-700;
   line-height: 16px;
+  transition: 0.4s;
 
   &--alt {
     background: $color-white;
+
+    &:hover {
+      background: #908ab1;
+      color: $color-white;
+    }
   }
 }
