@@ -5,4 +5,12 @@
   display: flex;
 
   gap: 25px;
+
+  &__img {
+    transition: 0.4s;
+
+    &:hover {
+      fill: grey;
+    }
+  }
 }
