@@ -1,5 +1,5 @@
-@use '../presets' as *;
-@use '../mixins' as *;
+@use "../presets" as *;
+@use "../mixins" as *;
 
 .navbar {
   z-index: 10;
@@ -7,16 +7,30 @@
 
 
   &__list {
+    display: flex;
+
+    gap: 20px;
     @include md {
       position: fixed;
-      transition: top 0.3s ease 0s;
-      overflow: auto;
       top: -100%;
       left: 0;
+
+      overflow: auto;
+
       width: 100%;
       height: 100%;
-      background-color: $color-white;
 
+      transition: top 0.3s ease 0s;
+
+      background-color: $color-white;
+    }
+    @include unlist;
+    @include md {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      padding: 60px 20px 40px 20px;
     }
 
     &.active {
@@ -24,20 +38,6 @@
         top: 0;
       }
     }
-
-    display: flex;
-
-    gap: 20px;
-    @include unlist;
-
-    @include md {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      padding: 60px 20px 40px 20px;
-
-    }
-
   }
 
   &__link {
@@ -47,19 +47,19 @@
     height: 80px;
     padding: 20px;
 
+    transition: 0.4s;
     text-align: center;
 
     color: $color-main;
 
     font-weight: $font-weight-500;
     line-height: 21px;
-    transition: 0.4s;
 
     @include md {
       padding: 0 40px;
       // height: 60px;
-      font-size: 30px;
 
+      font-size: 30px;
     }
 
     &:hover {
@@ -68,71 +68,77 @@
   }
 
   &__burger {
+    position: relative;
     // position: relative;
-
     // width: 18px;
     // height: 30px;
-
     // cursor: pointer;
     z-index: 5;
-    position: relative;
 
     @include md-min {
       display: none;
     }
-
     @include md {
       display: block;
-      margin-left: auto;
+
       width: 30px;
       height: 18px;
+      margin-left: auto;
+
       cursor: pointer;
 
       &::before {
-        content: "";
-
-        left: 0;
-        top: 0;
         position: absolute;
-        height: 10%;
+        top: 0;
+        left: 0;
+
         width: 100%;
+        height: 10%;
+
+        content: "";
         transition: all 0.3s ease 0s;
+
         background-color: black;
       }
 
       &::after {
-        content: "";
-        left: 0;
-        bottom: 0;
         position: absolute;
-        height: 10%;
+        bottom: 0;
+        left: 0;
+
         width: 100%;
+        height: 10%;
+
+        content: "";
         transition: all 0.3s ease 0s;
+
         background-color: black;
       }
 
       span {
-        left: 0;
-        top: 50%;
-        transform: scale(1) translate(0px, -50%);
         position: absolute;
-        height: 10%;
-        width: 100%;
-        transition: all 0.3s ease 0s;
-        background-color: black;
+        top: 50%;
+        left: 0;
 
+        width: 100%;
+        height: 10%;
+
+        transition: all 0.3s ease 0s;
+        transform: scale(1) translate(0px, -50%);
+
+        background-color: black;
       }
 
       &.active {
-        right: 30px;
-        top: 30px;
         position: fixed;
+        top: 30px;
+        right: 30px;
       }
 
       &.active::before {
         top: 50%;
-        transform: rotate(-45deg) translate(0, -50%);
 
+        transform: rotate(-45deg) translate(0, -50%);
       }
 
       &.active span {
@@ -140,12 +146,10 @@
       }
 
       &.active::after {
-        transform: rotate(45deg) translate(0, 50%);
         bottom: 50%;
 
+        transform: rotate(45deg) translate(0, 50%);
       }
-
-
     }
 
     // @include xs {

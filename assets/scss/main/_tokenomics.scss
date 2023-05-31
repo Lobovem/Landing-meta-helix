@@ -1,5 +1,5 @@
-@use '../presets' as *;
-@use '../mixins' as *;
+@use "../presets" as *;
+@use "../mixins" as *;
 
 .tokenomics {
   &__wrap {
@@ -19,17 +19,17 @@
       bottom: 0;
       left: 0;
 
-      content: '';
+      content: "";
+      // mix-blend-mode: multiply;
 
+      opacity: 0.1;
       border-radius: 20px;
       background: linear-gradient(180deg,
-          #cacaca 0%,
-          rgba(255, 255, 255, 0) 100%);
+      #cacaca 0%,
+      rgba(255, 255, 255, 0) 100%);
       box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
-      // mix-blend-mode: multiply;
-      opacity: 0.1;
     }
   }
 
@@ -40,7 +40,6 @@
     justify-content: space-between;
 
     gap: 40px;
-
     @include xl {
       align-items: center;
       flex-direction: column;
@@ -74,9 +73,10 @@
   }
 
   &__info-box {
+    z-index: 1;
+
     padding-top: 20px;
     padding-bottom: 20px;
-    z-index: 1;
 
     @include xl-min {
       margin-left: 10px;
@@ -84,17 +84,16 @@
 
       border-left: 1px solid white;
     }
-
     @include xl {
+      width: 100%;
       margin-bottom: 30px;
       padding-top: 50px;
-      width: 100%;
+
       text-align: center;
 
       border-top: 1px solid $color-white;
       border-bottom: 1px solid $color-white;
     }
-
     @include md {
       margin-bottom: 0;
       padding-top: 35px;
@@ -107,34 +106,36 @@
 
   &__slider-wrap {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     margin-bottom: 30px;
 
     @include xl {
       justify-content: center;
     }
-
     @include sm {
-      display: block;
       position: relative;
+
+      display: block;
     }
   }
 
   &__slider-button {
-    order: 1;
-    width: 40px;
     position: relative;
     top: -360px;
     right: -500px;
 
+    order: 1;
+
+    width: 40px;
+
     @include xl {
       top: -320px;
     }
-
     @include md {
-      right: -300px;
       top: 0;
+      right: -300px;
     }
 
     &.active {
@@ -146,21 +147,22 @@
     }
 
     &--alt {
-      order: 0;
-      width: 40px;
       position: relative;
       top: 194px;
+
+      order: 0;
+
+      width: 40px;
+
       transform: rotate(-180deg);
 
       @include xl {
         top: 194px;
       }
-
       @include md {
-        left: 200px;
         top: 514px;
+        left: 200px;
       }
-
       @include sm {
         top: 573px;
       }
@@ -169,15 +171,16 @@
 
   &__slider-img {
     padding: 0 40px;
-    mix-blend-mode: multiply;
 
     @include sm {
-      max-width: 100%;
-      padding: 60px 20px 0 20px;
       display: block;
+
+      max-width: 100%;
       margin-right: auto;
       margin-left: auto;
+      padding: 60px 20px 0 20px;
     }
+    mix-blend-mode: multiply;
   }
 
   &__footer-text {
@@ -205,50 +208,59 @@
 
 .fff {
   position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 350px;
   height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   span {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;
-    text-align: center;
     z-index: 1;
+
+    text-align: center;
+
     color: #454459;
+
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
   }
 
   &::after {
     position: absolute;
-    content: '';
-
-    left: 50%;
-    right: 50%;
     top: 50%;
+    right: 50%;
     bottom: 50%;
-    transform: translate(-50%, -50%);
-    width: 192px;
+    left: 50%;
 
+    width: 192px;
     height: 192px;
+
+    content: "";
+    transform: translate(-50%, -50%);
+
     border-radius: 96px;
     background: #ffffff;
     // mix-blend-mode: none;
-
-    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   }
 
   &::before {
     position: absolute;
-    content: '';
-    left: 0;
-    right: 0;
     top: 0;
+    right: 0;
     bottom: 0;
+    left: 0;
+
     width: 350px;
     height: 350px;
+
+    content: "";
+
     background-image: url(../img/slider-kryg.svg);
+
     mix-blend-mode: multiply;
   }
 }

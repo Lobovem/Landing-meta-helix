@@ -11,6 +11,7 @@
   padding: 10px;
 
   cursor: pointer;
+  transition: 0.4s;
 
   color: $color-black;
   border: none;
@@ -19,14 +20,13 @@
 
   font-weight: $font-weight-700;
   line-height: 16px;
-  transition: 0.4s;
 
   &--alt {
     background: $color-white;
 
     &:hover {
-      background: #908ab1;
       color: $color-white;
+      background: #908ab1;
     }
   }
 }

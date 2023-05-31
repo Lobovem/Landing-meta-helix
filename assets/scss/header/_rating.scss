@@ -1,5 +1,5 @@
-@use '../presets' as *;
-@use '../mixins' as *;
+@use "../presets" as *;
+@use "../mixins" as *;
 
 .rating {
   position: relative;
@@ -11,13 +11,13 @@
     bottom: 0;
     left: 0;
 
-    content: '';
+    content: "";
 
-    border-radius: 20px;
     opacity: 0.1;
+    border-radius: 20px;
     background: linear-gradient(180deg,
-        #cacaca 0%,
-        rgba(255, 255, 255, 0) 100%);
+    #cacaca 0%,
+    rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 28px 23px 11px rgba(0, 0, 0, 0.15);
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
@@ -36,20 +36,16 @@
 
     gap: 55px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
     @include xl-min {
       gap: 70px;
     }
-
     @include xl {
       gap: 40px 200px;
       grid-template-columns: 1fr 1fr;
     }
-
     @include md {
       gap: 40px;
     }
-
     @include md {
       padding-top: 60px;
       padding-bottom: 80px;
@@ -63,18 +59,18 @@
     top: -203px;
     bottom: 0;
     left: 50%;
-    transform: translatex(-50%);
 
-    content: '';
+    content: "";
+    transform: translatex(-50%);
 
     @include xl {
       top: -155px;
 
       max-width: 270px;
     }
-
     @include md {
       top: -87px;
+
       max-width: 150px;
     }
   }
@@ -100,23 +96,18 @@
     background: $color-white;
 
     gap: 72px;
-
     @include xl {
       padding: 56px 40px;
     }
-
     @include xl {
       gap: 40px;
     }
-
     @include md {
       flex-direction: column;
     }
-
     @include xs {
       padding: 20px;
     }
-
     mix-blend-mode: normal;
   }
 

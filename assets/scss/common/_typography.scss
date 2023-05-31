@@ -1,5 +1,5 @@
-@use '../presets' as *;
-@use '../mixins' as *;
+@use "../presets" as *;
+@use "../mixins" as *;
 
 *,
 *::before,
@@ -28,18 +28,18 @@ html {
     bottom: 0;
     left: 0;
 
-    content: '';
+    content: "";
 
     background: linear-gradient(185.23deg,
-        #52146f -15%,
-        #10127b 32.04%,
-        #52146f 66.06%,
-        #19198d 88.16%);
+    #52146f -15%,
+    #10127b 32.04%,
+    #52146f 66.06%,
+    #19198d 88.16%);
     background-repeat: no-repeat;
   }
 }
 
-.touch {}
+
 
 .lock {
   overflow: hidden;

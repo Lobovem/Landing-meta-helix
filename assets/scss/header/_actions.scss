@@ -1,5 +1,5 @@
-@use '../presets' as *;
-@use '../mixins' as *;
+@use "../presets" as *;
+@use "../mixins" as *;
 
 .actions {
   display: flex;
@@ -13,11 +13,9 @@
   background: $color-white;
 
   gap: $gap;
-
   @include xl {
     padding: 0 50px;
   }
-
   @include md {
     height: 65px;
     padding: 15px 35px 15px 50px;
@@ -31,7 +29,5 @@
     @include lg {
       display: none;
     }
-
-
   }
 }
