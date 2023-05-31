@@ -1,13 +1,25 @@
 @use '../presets' as *;
 @use '../mixins' as *;
 
+.swiper-features {
+  overflow-x: hidden;
+}
+
 .features {
   position: relative;
 
   &__slider {
     position: relative;
     z-index: 2;
-    overflow-x: hidden;
+    margin-right: 10px;
+    margin-left: auto;
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+    }
+
+    // overflow-x: hidden;
   }
 
   &::after {
@@ -49,11 +61,6 @@
 
       background: $color-white;
     }
-  }
-
-  &__slider {
-    margin-right: 10px;
-    margin-left: auto;
   }
 
   &__decor-title-box {
